@@ -1,0 +1,3909 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Python SDK for the HyperBinder neurosymbolic database">
+      
+      
+      
+      
+        <link rel="prev" href="../compounds/">
+      
+      
+        <link rel="next" href="../query/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Fields & Encoding - HyperBinder SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fields-encoding" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="HyperBinder SDK" class="md-header__button md-logo" aria-label="HyperBinder SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HyperBinder SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fields & Encoding
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hyperbinder/sdk" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="HyperBinder SDK" class="md-nav__button md-logo" aria-label="HyperBinder SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HyperBinder SDK
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hyperbinder/sdk" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../concepts/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Compose System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/molecules-vs-compounds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Molecules vs Compounds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/intersections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Client
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Client
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HyperBinder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Compose
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Compose
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../molecules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Molecules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compounds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compounds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Fields & Encoding
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Fields & Encoding
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.compose.Field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field--column-name-matches-slot-name-most-common" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column name matches slot name (most common)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field--column-name-differs-from-slot-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column name differs from slot name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field--field-with-custom-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field with custom encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field--field-with-weight-boost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field with weight boost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field--numeric-field-with-scale-preset-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric field with scale preset (recommended)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field--numeric-field-with-custom-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric field with custom scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.name" class="md-nav__link">
+    <span class="md-ellipsis">
+      name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      weight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.similar_within" class="md-nav__link">
+    <span class="md-ellipsis">
+      similar_within
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.searchable" class="md-nav__link">
+    <span class="md-ellipsis">
+      searchable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.required" class="md-nav__link">
+    <span class="md-ellipsis">
+      required
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encoding
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.compose.Encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encoding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Encoding.SEMANTIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      SEMANTIC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Encoding.EXACT" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXACT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Encoding.NUMERIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      NUMERIC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Encoding.TEMPORAL" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEMPORAL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Encoding.HIERARCHICAL" class="md-nav__link">
+    <span class="md-ellipsis">
+      HIERARCHICAL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numericscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumericScale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumericScale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NumericScale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.CENTS" class="md-nav__link">
+    <span class="md-ellipsis">
+      CENTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.DOLLARS" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOLLARS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.DOLLARS_LUXURY" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOLLARS_LUXURY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.RATING_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      RATING_5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.RATING_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      RATING_10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.RATING_100" class="md-nav__link">
+    <span class="md-ellipsis">
+      RATING_100
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.PERCENTAGE" class="md-nav__link">
+    <span class="md-ellipsis">
+      PERCENTAGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.FRACTION" class="md-nav__link">
+    <span class="md-ellipsis">
+      FRACTION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.TEMPERATURE_C" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEMPERATURE_C
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.TEMPERATURE_F" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEMPERATURE_F
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.SMALL_COUNT" class="md-nav__link">
+    <span class="md-ellipsis">
+      SMALL_COUNT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.MEDIUM_COUNT" class="md-nav__link">
+    <span class="md-ellipsis">
+      MEDIUM_COUNT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.LARGE_COUNT" class="md-nav__link">
+    <span class="md-ellipsis">
+      LARGE_COUNT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.SECONDS" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECONDS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.MINUTES" class="md-nav__link">
+    <span class="md-ellipsis">
+      MINUTES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.HOURS" class="md-nav__link">
+    <span class="md-ellipsis">
+      HOURS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.DAYS" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAYS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#field-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field Weights
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encoding-selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encoding Selection Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encoding Selection Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fieldpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      FieldPath
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FieldPath">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath" class="md-nav__link">
+    <span class="md-ellipsis">
+      FieldPath
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FieldPath">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath.parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      parts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath.column_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      column_name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath.field" class="md-nav__link">
+    <span class="md-ellipsis">
+      field
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath.dot_notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      dot_notation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath.root_slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      root_slot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath.is_nested" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_nested
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schemaevolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaEvolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.compose.SchemaEvolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaEvolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SchemaEvolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.SchemaEvolution.ADAPTIVE" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADAPTIVE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.SchemaEvolution.STRICT" class="md-nav__link">
+    <span class="md-ellipsis">
+      STRICT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.SchemaEvolution.LOCKED" class="md-nav__link">
+    <span class="md-ellipsis">
+      LOCKED
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../query/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Query Builder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intersections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../observability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../examples/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/unified-intelligence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unified Intelligence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/fictional-universes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fictional Universes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/ecommerce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E-Commerce Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/enterprise-knowledge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterprise Knowledge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/fuzzy-to-exact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuzzy-to-Exact Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/intersections-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersections Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.compose.Field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field--column-name-matches-slot-name-most-common" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column name matches slot name (most common)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field--column-name-differs-from-slot-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column name differs from slot name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field--field-with-custom-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field with custom encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field--field-with-weight-boost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field with weight boost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field--numeric-field-with-scale-preset-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric field with scale preset (recommended)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field--numeric-field-with-custom-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric field with custom scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.name" class="md-nav__link">
+    <span class="md-ellipsis">
+      name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      weight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.similar_within" class="md-nav__link">
+    <span class="md-ellipsis">
+      similar_within
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.searchable" class="md-nav__link">
+    <span class="md-ellipsis">
+      searchable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.required" class="md-nav__link">
+    <span class="md-ellipsis">
+      required
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encoding
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.compose.Encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encoding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Encoding.SEMANTIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      SEMANTIC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Encoding.EXACT" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXACT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Encoding.NUMERIC" class="md-nav__link">
+    <span class="md-ellipsis">
+      NUMERIC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Encoding.TEMPORAL" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEMPORAL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Encoding.HIERARCHICAL" class="md-nav__link">
+    <span class="md-ellipsis">
+      HIERARCHICAL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numericscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumericScale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumericScale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NumericScale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.CENTS" class="md-nav__link">
+    <span class="md-ellipsis">
+      CENTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.DOLLARS" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOLLARS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.DOLLARS_LUXURY" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOLLARS_LUXURY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.RATING_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      RATING_5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.RATING_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      RATING_10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.RATING_100" class="md-nav__link">
+    <span class="md-ellipsis">
+      RATING_100
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.PERCENTAGE" class="md-nav__link">
+    <span class="md-ellipsis">
+      PERCENTAGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.FRACTION" class="md-nav__link">
+    <span class="md-ellipsis">
+      FRACTION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.TEMPERATURE_C" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEMPERATURE_C
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.TEMPERATURE_F" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEMPERATURE_F
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.SMALL_COUNT" class="md-nav__link">
+    <span class="md-ellipsis">
+      SMALL_COUNT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.MEDIUM_COUNT" class="md-nav__link">
+    <span class="md-ellipsis">
+      MEDIUM_COUNT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.LARGE_COUNT" class="md-nav__link">
+    <span class="md-ellipsis">
+      LARGE_COUNT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.SECONDS" class="md-nav__link">
+    <span class="md-ellipsis">
+      SECONDS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.MINUTES" class="md-nav__link">
+    <span class="md-ellipsis">
+      MINUTES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.HOURS" class="md-nav__link">
+    <span class="md-ellipsis">
+      HOURS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.NumericScale.DAYS" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAYS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#field-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field Weights
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encoding-selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encoding Selection Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encoding Selection Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fieldpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      FieldPath
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FieldPath">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath" class="md-nav__link">
+    <span class="md-ellipsis">
+      FieldPath
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FieldPath">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath.parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      parts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath.column_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      column_name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath.field" class="md-nav__link">
+    <span class="md-ellipsis">
+      field
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath.dot_notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      dot_notation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath.root_slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      root_slot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.fields.FieldPath.is_nested" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_nested
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schemaevolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaEvolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.compose.SchemaEvolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaEvolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SchemaEvolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.SchemaEvolution.ADAPTIVE" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADAPTIVE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.SchemaEvolution.STRICT" class="md-nav__link">
+    <span class="md-ellipsis">
+      STRICT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.SchemaEvolution.LOCKED" class="md-nav__link">
+    <span class="md-ellipsis">
+      LOCKED
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="fields-encoding">Fields &amp; Encoding<a class="headerlink" href="#fields-encoding" title="Permanent link">&para;</a></h1>
+<p>Configure how individual fields are encoded into hypervectors.</p>
+<h2 id="field">Field<a class="headerlink" href="#field" title="Permanent link">&para;</a></h2>
+<p>The <code>Field</code> class configures a single column's encoding behavior.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">Field</span><span class="p">,</span> <span class="n">Encoding</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">Field</span><span class="p">(</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;description&quot;</span><span class="p">,</span>           <span class="c1"># Column name (optional, inferred from slot)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">SEMANTIC</span><span class="p">,</span>   <span class="c1"># How to encode values</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">weight</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>                   <span class="c1"># Importance in similarity (default 1.0)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">similar_within</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>           <span class="c1"># Scale for NUMERIC encoding</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">searchable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>              <span class="c1"># Include in search (default True)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.compose.Field" class="doc doc-heading">
+            <code>hybi.compose.Field</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.compose.Field" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Configuration for a single field in a Compose schema.</p>
+<p>Field.name specifies which DataFrame COLUMN to use for this slot.
+The slot name (e.g., "subject" in Triple) is separate from the column name.</p>
+
+
+<details class="column-name-resolution" open>
+  <summary>Column Name Resolution</summary>
+  <ol>
+<li>If Field.name is provided, use that as the column name</li>
+<li>If Field.name is None, use the slot name as the column name</li>
+</ol>
+</details>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <h3 id="hybi.compose.Field--column-name-matches-slot-name-most-common">Column name matches slot name (most common)<a class="headerlink" href="#hybi.compose.Field--column-name-matches-slot-name-most-common" title="Permanent link">&para;</a></h3>
+<p>Triple(
+    subject=Field("subject"),  # Uses column "subject"
+    predicate=Field("predicate"),
+    object=Field("object"),
+)</p>
+<h3 id="hybi.compose.Field--column-name-differs-from-slot-name">Column name differs from slot name<a class="headerlink" href="#hybi.compose.Field--column-name-differs-from-slot-name" title="Permanent link">&para;</a></h3>
+<p>Triple(
+    subject=Field("entity_name"),  # Uses column "entity_name" for subject slot
+    predicate=Field("relation_type"),
+    object=Field("target_entity"),
+)</p>
+<h3 id="hybi.compose.Field--field-with-custom-encoding">Field with custom encoding<a class="headerlink" href="#hybi.compose.Field--field-with-custom-encoding" title="Permanent link">&para;</a></h3>
+<p>Field("category", encoding=Encoding.EXACT)</p>
+<h3 id="hybi.compose.Field--field-with-weight-boost">Field with weight boost<a class="headerlink" href="#hybi.compose.Field--field-with-weight-boost" title="Permanent link">&para;</a></h3>
+<p>Field("description", weight=2.0)</p>
+<h3 id="hybi.compose.Field--numeric-field-with-scale-preset-recommended">Numeric field with scale preset (recommended)<a class="headerlink" href="#hybi.compose.Field--numeric-field-with-scale-preset-recommended" title="Permanent link">&para;</a></h3>
+<p>Field("price", encoding=Encoding.NUMERIC, similar_within=NumericScale.DOLLARS)</p>
+<h3 id="hybi.compose.Field--numeric-field-with-custom-scale">Numeric field with custom scale<a class="headerlink" href="#hybi.compose.Field--numeric-field-with-custom-scale" title="Permanent link">&para;</a></h3>
+<p>Field("score", encoding=Encoding.NUMERIC, similar_within=25)</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Field.name" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Field.name" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>DataFrame column name to use for this slot.</p>
+<p>If None, the slot name is used as the column name.
+Example: Triple(subject=Field()) uses the "subject" column.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Field.encoding" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">encoding</span> <span class="o">=</span> <span class="n">Encoding</span><span class="o">.</span><span class="n">SEMANTIC</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Field.encoding" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>How values are encoded into hypervectors.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Field.weight" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">weight</span> <span class="o">=</span> <span class="mf">1.0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Field.weight" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Importance weight in similarity calculations.</p>
+<p>Higher weights make this field more influential in search.
+The final score is a weighted average: Σ(similarity × weight) / Σ(weight).</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Field.similar_within" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">similar_within</span> <span class="o">=</span> <span class="mf">0.1</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Field.similar_within" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Scale for NUMERIC encoding: the distance at which values are "similar".</p>
+<p>Values within this distance have ~60% similarity.
+Values at 2× this distance have ~14% similarity.
+Values at 3× this distance have ~1% similarity.</p>
+
+
+<details class="use-numericscale-presets-for-common-data-types" open>
+  <summary>Use NumericScale presets for common data types</summary>
+  <p>similar_within=NumericScale.DOLLARS     # $50 difference = similar
+similar_within=NumericScale.RATING_5    # 0.5 star difference = similar
+similar_within=NumericScale.PERCENTAGE  # 5 points difference = similar</p>
+</details>
+
+<details class="or-use-a-custom-number" open>
+  <summary>Or use a custom number</summary>
+  <p>similar_within=100  # 100 units difference = similar</p>
+</details>        <p>Only used when encoding=Encoding.NUMERIC.
+Default: 0.1 (suitable for normalized 0-1 data).</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Field.searchable" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">searchable</span> <span class="o">=</span> <span class="kc">True</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Field.searchable" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Whether to include this field in search queries.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Field.required" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">required</span> <span class="o">=</span> <span class="kc">False</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Field.required" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Whether the field must be present (not null) in data.</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.compose.Field.__init__" class="doc doc-heading">
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">SEMANTIC</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">similar_within</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">searchable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#hybi.compose.Field.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><hr />
+<h2 id="encoding">Encoding<a class="headerlink" href="#encoding" title="Permanent link">&para;</a></h2>
+<p>The <code>Encoding</code> enum specifies how values become vectors.</p>
+<table>
+<thead>
+<tr>
+<th>Encoding</th>
+<th>Behavior</th>
+<th>Use When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SEMANTIC</code></td>
+<td>Similar values → similar vectors</td>
+<td>Text, names, descriptions</td>
+</tr>
+<tr>
+<td><code>EXACT</code></td>
+<td>Each unique value → distinct vector</td>
+<td>IDs, categories, types</td>
+</tr>
+<tr>
+<td><code>NUMERIC</code></td>
+<td>Close numbers → similar vectors</td>
+<td>Prices, counts, ratings</td>
+</tr>
+<tr>
+<td><code>TEMPORAL</code></td>
+<td>Time-aware encoding for dates/timestamps</td>
+<td>Timestamps, dates, event times</td>
+</tr>
+<tr>
+<td><code>HIERARCHICAL</code></td>
+<td>Parent-child similarity encoding</td>
+<td>Taxonomies, org structures</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">Encoding</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Semantic: &quot;apple&quot; is similar to &quot;fruit&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">SEMANTIC</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Exact: &quot;category_a&quot; is NOT similar to &quot;category_b&quot;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">EXACT</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># Numeric: 100 is similar to 110 (within similar_within)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">NUMERIC</span><span class="p">,</span> <span class="n">similar_within</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.compose.Encoding" class="doc doc-heading">
+            <code>hybi.compose.Encoding</code>
+
+
+<a href="#hybi.compose.Encoding" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="enum.Enum">Enum</span></code></p>
+
+
+
+        <p>How a field value is encoded into hypervectors.</p>
+<p>Different encoding types are suited for different data types
+and query patterns.</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Encoding.SEMANTIC" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">SEMANTIC</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Encoding.SEMANTIC" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Similar values produce similar vectors (default).</p>
+<p>Best for: text, embeddings, semantic content.
+Enables: similarity search, semantic matching.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Encoding.EXACT" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">EXACT</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Encoding.EXACT" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Each unique value gets a random orthogonal vector.</p>
+<p>Best for: categorical values, IDs, enums.
+Enables: exact match queries, slot-based unbinding.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Encoding.NUMERIC" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">NUMERIC</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Encoding.NUMERIC" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Gaussian RBF encoding for continuous values.</p>
+<p>Best for: prices, measurements, quantities.
+Enables: range queries, numeric similarity.
+Uses similar_within parameter for scale.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Encoding.TEMPORAL" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">TEMPORAL</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Encoding.TEMPORAL" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Time-aware encoding for dates and timestamps.</p>
+<p>Storage: Unix epoch seconds (i64 precision).
+Timezone: Naive datetime/strings use local time; timezone-aware respected.
+NULLs: Field omitted from storage; queries treat as "no match".</p>
+<p>Best for: timestamps, dates, event times.
+Enables: temporal queries, time-range filtering.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Encoding.HIERARCHICAL" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">HIERARCHICAL</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Encoding.HIERARCHICAL" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Parent-child similarity encoding.</p>
+<p>Best for: categories, taxonomies, org structures.
+Enables: hierarchical queries, level-aware matching.</p>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><hr />
+<h2 id="numericscale">NumericScale<a class="headerlink" href="#numericscale" title="Permanent link">&para;</a></h2>
+<p>Pre-configured scales for numeric encoding.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">Field</span><span class="p">,</span> <span class="n">Encoding</span><span class="p">,</span> <span class="n">NumericScale</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Prices in dollars (similar within $100)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">NUMERIC</span><span class="p">,</span> <span class="n">similar_within</span><span class="o">=</span><span class="n">NumericScale</span><span class="o">.</span><span class="n">DOLLARS</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># 5-star ratings</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;rating&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">NUMERIC</span><span class="p">,</span> <span class="n">similar_within</span><span class="o">=</span><span class="n">NumericScale</span><span class="o">.</span><span class="n">RATING_5</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># Percentages</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;score&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">NUMERIC</span><span class="p">,</span> <span class="n">similar_within</span><span class="o">=</span><span class="n">NumericScale</span><span class="o">.</span><span class="n">PERCENTAGE</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.compose.NumericScale" class="doc doc-heading">
+            <code>hybi.compose.NumericScale</code>
+
+
+<a href="#hybi.compose.NumericScale" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Preset scales for NUMERIC field encoding.</p>
+<p>These presets define "similar_within" values for common data types.
+The value represents the distance at which two numbers have ~60% similarity.</p>
+
+
+<details class="usage" open>
+  <summary>Usage</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>Field("price", encoding=Encoding.NUMERIC, similar_within=NumericScale.DOLLARS)
+Field("rating", encoding=Encoding.NUMERIC, similar_within=NumericScale.RATING_5)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+<details class="how-it-works" open>
+  <summary>How it works</summary>
+  <p>similar_within=50 means values within 50 units have high similarity (~60%+).
+Values at exactly 50 apart have ~60% similarity.
+Values at 100 apart (2x) have ~14% similarity.
+Values at 150 apart (3x) have ~1% similarity.</p>
+</details>
+
+<details class="custom-values" open>
+  <summary>Custom values</summary>
+  <p>You can use any positive number: similar_within=100 for custom scales.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.CENTS" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">CENTS</span> <span class="o">=</span> <span class="mi">10</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.CENTS" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Price in cents: $0.10 difference = high similarity. For micro-transactions.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.DOLLARS" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">DOLLARS</span> <span class="o">=</span> <span class="mi">50</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.DOLLARS" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Price in dollars: $50 difference = high similarity. For consumer goods.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.DOLLARS_LUXURY" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">DOLLARS_LUXURY</span> <span class="o">=</span> <span class="mi">500</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.DOLLARS_LUXURY" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Price in dollars: $500 difference = high similarity. For luxury items.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.RATING_5" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">RATING_5</span> <span class="o">=</span> <span class="mf">0.5</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.RATING_5" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>5-star rating: 0.5 star difference = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.RATING_10" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">RATING_10</span> <span class="o">=</span> <span class="mf">1.0</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.RATING_10" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>10-point rating: 1 point difference = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.RATING_100" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">RATING_100</span> <span class="o">=</span> <span class="mi">10</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.RATING_100" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>100-point rating (percentages): 10 point difference = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.PERCENTAGE" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">PERCENTAGE</span> <span class="o">=</span> <span class="mi">5</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.PERCENTAGE" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Percentage (0-100): 5 percentage points = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.FRACTION" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">FRACTION</span> <span class="o">=</span> <span class="mf">0.05</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.FRACTION" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Fraction (0.0-1.0): 0.05 difference = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.TEMPERATURE_C" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">TEMPERATURE_C</span> <span class="o">=</span> <span class="mi">2</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.TEMPERATURE_C" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Temperature in Celsius: 2°C difference = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.TEMPERATURE_F" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">TEMPERATURE_F</span> <span class="o">=</span> <span class="mi">4</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.TEMPERATURE_F" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Temperature in Fahrenheit: 4°F difference = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.SMALL_COUNT" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">SMALL_COUNT</span> <span class="o">=</span> <span class="mi">1</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.SMALL_COUNT" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Small counts (0-10): 1 unit difference = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.MEDIUM_COUNT" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">MEDIUM_COUNT</span> <span class="o">=</span> <span class="mi">10</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.MEDIUM_COUNT" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Medium counts (0-100): 10 unit difference = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.LARGE_COUNT" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">LARGE_COUNT</span> <span class="o">=</span> <span class="mi">100</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.LARGE_COUNT" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Large counts (0-1000): 100 unit difference = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.SECONDS" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">SECONDS</span> <span class="o">=</span> <span class="mi">5</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.SECONDS" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Duration in seconds: 5 seconds = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.MINUTES" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">MINUTES</span> <span class="o">=</span> <span class="mi">1</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.MINUTES" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Duration in minutes: 1 minute = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.HOURS" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">HOURS</span> <span class="o">=</span> <span class="mf">0.5</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.HOURS" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Duration in hours: 30 minutes = high similarity.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.NumericScale.DAYS" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">DAYS</span> <span class="o">=</span> <span class="mi">1</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.NumericScale.DAYS" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Duration in days: 1 day = high similarity.</p>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><hr />
+<h2 id="field-weights">Field Weights<a class="headerlink" href="#field-weights" title="Permanent link">&para;</a></h2>
+<p>Weights control relative importance in similarity calculations:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">Bundle</span><span class="p">,</span> <span class="n">Field</span><span class="p">,</span> <span class="n">Encoding</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">schema</span> <span class="o">=</span> <span class="n">Bundle</span><span class="p">(</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">fields</span><span class="o">=</span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">Field</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">SEMANTIC</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mf">2.0</span><span class="p">),</span>  <span class="c1"># 2x importance</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">Field</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">SEMANTIC</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mf">1.0</span><span class="p">),</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="n">Field</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">EXACT</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>  <span class="c1"># Half weight</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="p">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">)</span>
+</code></pre></div>
+<p>When searching, higher-weighted fields contribute more to the similarity score.</p>
+<hr />
+<h2 id="encoding-selection-guide">Encoding Selection Guide<a class="headerlink" href="#encoding-selection-guide" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    Q1{Categorical/ID?} --&gt;|Yes| EXACT
+    Q1 --&gt;|No| Q2{Numeric?}
+    Q2 --&gt;|Yes| NUMERIC
+    Q2 --&gt;|No| SEMANTIC</code></pre>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field Type</th>
+<th>Example Values</th>
+<th>Encoding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product name</td>
+<td>"MacBook Pro", "iPhone"</td>
+<td>SEMANTIC</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>"electronics", "clothing"</td>
+<td>EXACT</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>999.99, 49.99</td>
+<td>NUMERIC</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>"Lightweight laptop..."</td>
+<td>SEMANTIC</td>
+</tr>
+<tr>
+<td>User ID</td>
+<td>"user_12345"</td>
+<td>EXACT</td>
+</tr>
+<tr>
+<td>Rating</td>
+<td>4.5, 3.0</td>
+<td>NUMERIC</td>
+</tr>
+<tr>
+<td>Relationship type</td>
+<td>"works_at", "knows"</td>
+<td>EXACT</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="fieldpath">FieldPath<a class="headerlink" href="#fieldpath" title="Permanent link">&para;</a></h2>
+<p>The <code>FieldPath</code> dataclass represents a path to a field within a nested schema. It's returned by <code>schema.resolve_field()</code> and used internally for field resolution.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose.fields</span><span class="w"> </span><span class="kn">import</span> <span class="n">FieldPath</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># FieldPath for a nested field</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">path</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">resolve_field</span><span class="p">(</span><span class="s2">&quot;subject_type&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">parts</span><span class="p">)</span>          <span class="c1"># (&quot;subject&quot;, &quot;left&quot;)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">column_name</span><span class="p">)</span>    <span class="c1"># &quot;subject_type&quot;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">dot_notation</span><span class="p">)</span>   <span class="c1"># &quot;subject.left&quot;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">root_slot</span><span class="p">)</span>      <span class="c1"># &quot;subject&quot;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">is_nested</span><span class="p">)</span>      <span class="c1"># True</span>
+</code></pre></div>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>parts</code></td>
+<td><code>Tuple[str, ...]</code></td>
+<td>Tuple of slot names from root to field</td>
+</tr>
+<tr>
+<td><code>column_name</code></td>
+<td><code>str</code></td>
+<td>The DataFrame column name</td>
+</tr>
+<tr>
+<td><code>field</code></td>
+<td><code>Field</code></td>
+<td>The Field configuration</td>
+</tr>
+<tr>
+<td><code>dot_notation</code></td>
+<td><code>str</code></td>
+<td>Path as dot-separated string</td>
+</tr>
+<tr>
+<td><code>root_slot</code></td>
+<td><code>str</code></td>
+<td>The top-level slot name</td>
+</tr>
+<tr>
+<td><code>is_nested</code></td>
+<td><code>bool</code></td>
+<td>True if path has multiple parts</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.compose.fields.FieldPath" class="doc doc-heading">
+            <code>hybi.compose.fields.FieldPath</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.compose.fields.FieldPath" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Represents a path to a field within a nested schema.</p>
+<p>For simple schemas: FieldPath(("subject",), "entity", field)
+For nested schemas: FieldPath(("subject", "left"), "subject_type", field)</p>
+<p>This enables queries using column names (what users see in DataFrames)
+rather than requiring knowledge of the internal slot structure.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><a class="autorefs autorefs-internal" title="parts
+
+  
+      instance-attribute
+   (hybi.compose.fields.FieldPath.parts)" href="#hybi.compose.fields.FieldPath.parts">parts</a></code></td>
+            <td>
+                  <code><span title="typing.Tuple">Tuple</span>[<span title="str">str</span>, ...]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Tuple of slot names forming the path from root to leaf</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><a class="autorefs autorefs-internal" title="column_name
+
+  
+      instance-attribute
+   (hybi.compose.fields.FieldPath.column_name)" href="#hybi.compose.fields.FieldPath.column_name">column_name</a></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The DataFrame column name this path maps to</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><a class="autorefs autorefs-internal" title="field
+
+  
+      instance-attribute
+   (hybi.compose.fields.FieldPath.field)" href="#hybi.compose.fields.FieldPath.field">field</a></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="hybi.compose.Field
+
+
+  
+      dataclass
+   (hybi.compose.fields.Field)" href="#hybi.compose.Field">Field</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The Field configuration at this path</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>schema = Triple(
+...     subject=Pair(
+...         left=Field("subject_type"),
+...         right=Field("subject_name"),
+...     ),
+...     predicate=Field("relation"),
+...     object=Field("target"),
+... )
+field_map = schema.get_field_map()
+field_map["subject_type"]
+FieldPath(parts=("subject", "left"), column_name="subject_type", field=Field(...))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.fields.FieldPath.parts" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">parts</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.fields.FieldPath.parts" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Tuple of slot names from root to this field.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.fields.FieldPath.column_name" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">column_name</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.fields.FieldPath.column_name" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>The DataFrame column name this path maps to.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.fields.FieldPath.field" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">field</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.fields.FieldPath.field" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>The Field configuration at this path.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.fields.FieldPath.dot_notation" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">dot_notation</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#hybi.compose.fields.FieldPath.dot_notation" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return the path as dot-separated string: 'subject.left'.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.fields.FieldPath.root_slot" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">root_slot</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#hybi.compose.fields.FieldPath.root_slot" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return the top-level slot name.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.fields.FieldPath.is_nested" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">is_nested</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#hybi.compose.fields.FieldPath.is_nested" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Whether this is a nested path (more than one part).</p>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><hr />
+<h2 id="schemaevolution">SchemaEvolution<a class="headerlink" href="#schemaevolution" title="Permanent link">&para;</a></h2>
+<p>The <code>SchemaEvolution</code> enum controls how schema changes are handled during subsequent ingest operations on a collection.</p>
+<p>When using <code>ADAPTIVE</code> mode, you can optionally suppress evolution warnings for bulk/backfill jobs.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">SchemaEvolution</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">hb</span><span class="o">.</span><span class="n">ingest</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">collection</span><span class="o">=</span><span class="s2">&quot;users&quot;</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="n">evolution</span><span class="o">=</span><span class="n">SchemaEvolution</span><span class="o">.</span><span class="n">STRICT</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># ADAPTIVE mode with warnings suppressed</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">hb</span><span class="o">.</span><span class="n">ingest</span><span class="p">(</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">df</span><span class="p">,</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">collection</span><span class="o">=</span><span class="s2">&quot;users&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="n">evolution</span><span class="o">=</span><span class="n">SchemaEvolution</span><span class="o">.</span><span class="n">ADAPTIVE</span><span class="p">,</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="n">warn_schema_evolution</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADAPTIVE</code></td>
+<td>Default. Additive changes allowed with warnings. New fields auto-added.</td>
+</tr>
+<tr>
+<td><code>STRICT</code></td>
+<td>No changes allowed without explicit migration. Raises error on schema change.</td>
+</tr>
+<tr>
+<td><code>LOCKED</code></td>
+<td>Immutable schema. Even additive changes are blocked after first ingest.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>warn_schema_evolution</code></td>
+<td><code>bool</code></td>
+<td><code>True</code></td>
+<td>In <code>ADAPTIVE</code> mode, emit schema evolution warnings when additive changes are applied. Set to <code>False</code> to suppress warning noise in controlled pipelines.</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.compose.SchemaEvolution" class="doc doc-heading">
+            <code>hybi.compose.SchemaEvolution</code>
+
+
+<a href="#hybi.compose.SchemaEvolution" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="enum.Enum">Enum</span></code></p>
+
+
+
+        <p>Controls how schema changes are handled for a collection.</p>
+<p>Schema evolution mode determines whether changes to the schema
+(adding fields, changing encodings, etc.) are allowed during
+subsequent ingest operations.</p>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>hb.ingest(df, collection="users", schema=schema,
+...           evolution=SchemaEvolution.STRICT)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.SchemaEvolution.ADAPTIVE" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">ADAPTIVE</span> <span class="o">=</span> <span class="s1">&#39;adaptive&#39;</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.SchemaEvolution.ADAPTIVE" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Default mode: additive changes allowed with warnings.</p>
+<ul>
+<li>New fields in data are automatically added to schema</li>
+<li>Breaking changes (removing fields) require explicit flag</li>
+<li>Encoding changes require explicit migration</li>
+<li>Best for: development, exploration, evolving data</li>
+</ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.SchemaEvolution.STRICT" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">STRICT</span> <span class="o">=</span> <span class="s1">&#39;strict&#39;</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.SchemaEvolution.STRICT" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>No changes allowed without explicit migration.</p>
+<ul>
+<li>Any schema change raises an error</li>
+<li>Requires explicit migration for changes</li>
+<li>Best for: production, regulated environments</li>
+</ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.SchemaEvolution.LOCKED" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">LOCKED</span> <span class="o">=</span> <span class="s1">&#39;locked&#39;</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.SchemaEvolution.LOCKED" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Immutable schema - no changes allowed at all.</p>
+<ul>
+<li>Even additive changes are blocked</li>
+<li>Schema is frozen after first ingest</li>
+<li>Best for: audit logs, compliance, immutable data</li>
+</ul>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>

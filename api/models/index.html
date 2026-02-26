@@ -1,0 +1,4401 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Python SDK for the HyperBinder neurosymbolic database">
+      
+      
+      
+      
+        <link rel="prev" href="../compose/intersections/">
+      
+      
+        <link rel="next" href="../exceptions/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Models - HyperBinder SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HyperBinder SDK" class="md-header__button md-logo" aria-label="HyperBinder SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HyperBinder SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hyperbinder/sdk" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HyperBinder SDK" class="md-nav__button md-logo" aria-label="HyperBinder SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HyperBinder SDK
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hyperbinder/sdk" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../concepts/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Compose System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/molecules-vs-compounds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Molecules vs Compounds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/intersections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Client
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Client
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HyperBinder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../compose/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Compose
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Compose
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compose/molecules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Molecules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compose/compounds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compounds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compose/fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fields & Encoding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compose/query/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Query Builder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compose/validation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compose/intersections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searchresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      SearchResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.SearchResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      SearchResult
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SearchResult">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.SearchResult.__getitem__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __getitem__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.SearchResult.get" class="md-nav__link">
+    <span class="md-ellipsis">
+      get
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multihopresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      MultihopResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.MultihopResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      MultihopResult
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MultihopResult">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hoptrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      HopTrace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.HopTrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      HopTrace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HopTrace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pathtrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      PathTrace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.PathTrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      PathTrace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PathTrace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.PathTrace.__str__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __str__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.PathTrace.summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selectresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      SelectResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.SelectResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      SelectResult
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SelectResult">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aggregateresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      AggregateResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.AggregateResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      AggregateResult
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AggregateResult">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#joinresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      JoinResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.JoinResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      JoinResult
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rag-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAG Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RAG Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.Context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.Context--use-in-llm-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use in LLM prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Answer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.Answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Answer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Answer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chunk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.Chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chunk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chunk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.Source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collection-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collection Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Collection Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collectioninfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      CollectionInfo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.CollectionInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      CollectionInfo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CollectionInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collectionstats" class="md-nav__link">
+    <span class="md-ellipsis">
+      CollectionStats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.CollectionStats" class="md-nav__link">
+    <span class="md-ellipsis">
+      CollectionStats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CollectionStats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats--access-stored-compose-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access stored Compose schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.schema_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.evolution_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      evolution_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.reasoning_enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      reasoning_enabled
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.reasoning_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      reasoning_config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.reasoning_model_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      reasoning_model_version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.reasoning_trained_at" class="md-nav__link">
+    <span class="md-ellipsis">
+      reasoning_trained_at
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.get_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.get_evolution_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_evolution_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.get_reasoning_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_reasoning_config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingestresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      IngestResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.IngestResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      IngestResult
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../observability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../examples/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/unified-intelligence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unified Intelligence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/fictional-universes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fictional Universes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ecommerce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E-Commerce Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/enterprise-knowledge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterprise Knowledge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/fuzzy-to-exact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuzzy-to-Exact Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/intersections-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersections Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searchresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      SearchResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.SearchResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      SearchResult
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SearchResult">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.SearchResult.__getitem__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __getitem__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.SearchResult.get" class="md-nav__link">
+    <span class="md-ellipsis">
+      get
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multihopresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      MultihopResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.MultihopResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      MultihopResult
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MultihopResult">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hoptrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      HopTrace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.HopTrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      HopTrace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HopTrace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pathtrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      PathTrace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.PathTrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      PathTrace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PathTrace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.PathTrace.__str__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __str__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.PathTrace.summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selectresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      SelectResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.SelectResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      SelectResult
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SelectResult">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aggregateresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      AggregateResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.AggregateResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      AggregateResult
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AggregateResult">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#joinresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      JoinResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.JoinResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      JoinResult
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rag-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAG Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RAG Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.Context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.Context--use-in-llm-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use in LLM prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Answer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.Answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Answer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Answer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chunk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.Chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chunk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chunk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.Source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collection-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collection Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Collection Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collectioninfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      CollectionInfo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.CollectionInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      CollectionInfo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CollectionInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collectionstats" class="md-nav__link">
+    <span class="md-ellipsis">
+      CollectionStats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.CollectionStats" class="md-nav__link">
+    <span class="md-ellipsis">
+      CollectionStats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CollectionStats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats--access-stored-compose-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access stored Compose schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.schema_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.evolution_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      evolution_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.reasoning_enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      reasoning_enabled
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.reasoning_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      reasoning_config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.reasoning_model_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      reasoning_model_version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.reasoning_trained_at" class="md-nav__link">
+    <span class="md-ellipsis">
+      reasoning_trained_at
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.get_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.get_evolution_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_evolution_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.CollectionStats.get_reasoning_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_reasoning_config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingestresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      IngestResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.IngestResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      IngestResult
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="data-models">Data Models<a class="headerlink" href="#data-models" title="Permanent link">&para;</a></h1>
+<p>Response types returned by HyperBinder API operations.</p>
+<h2 id="search-results">Search Results<a class="headerlink" href="#search-results" title="Permanent link">&para;</a></h2>
+<h3 id="searchresult">SearchResult<a class="headerlink" href="#searchresult" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.SearchResult" class="doc doc-heading">
+            <code>hybi.SearchResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.SearchResult" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>A single result from a search query.</p>
+<p>SearchResult provides dict-like access to row data along with a similarity
+score indicating match quality. Returned by search(), semantic search,
+and compose query operations.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.SearchResult.data">data</span></code></td>
+            <td>
+                  <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Row data as a dictionary mapping column names to values.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.SearchResult.score">score</span></code></td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Similarity score between 0.0 and 1.0. Higher values indicate
+better matches. Comparable across queries on the same collection.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.SearchResult.id">id</span></code></td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Internal row identifier. Used for updates and join operations.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>results = hb.search("enterprise AI", collection="customers")
+for r in results:
+...     print(f"{r['company_name']}: {r.score:.2f}")
+...     # Or access via data dict
+...     print(r.data.get('industry', 'Unknown'))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+<details class="see-also" open>
+  <summary>See Also</summary>
+  <p>MultihopResult: For graph traversal results with path information.
+ComposeResult: For schema-aware query results.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.SearchResult.__getitem__" class="doc doc-heading">
+            <code class="highlight language-python"><span class="fm">__getitem__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+
+<a href="#hybi.SearchResult.__getitem__" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Allow dict-like access: result['name']</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.SearchResult.get" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#hybi.SearchResult.get" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Dict-like get with default.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="multihopresult">MultihopResult<a class="headerlink" href="#multihopresult" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.MultihopResult" class="doc doc-heading">
+            <code>hybi.MultihopResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.MultihopResult" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>A single result from a multi-hop graph traversal query.</p>
+<p>Extends SearchResult with path information showing how the result
+was reached through the graph.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.MultihopResult.data">data</span></code></td>
+            <td>
+                  <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Row data as a dictionary mapping column names to values.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.MultihopResult.score">score</span></code></td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cumulative similarity score across all hops (0.0 to 1.0).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.MultihopResult.id">id</span></code></td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Internal row identifier.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.MultihopResult.path">path</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of intermediate rows traversed to reach this result.
+Each entry is a dict with the row data at that hop.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.MultihopResult.explanation">explanation</span></code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<a class="autorefs autorefs-internal" title="hybi.PathTrace
+
+
+  
+      dataclass
+   (hybi.models.search.PathTrace)" href="#hybi.PathTrace">PathTrace</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional PathTrace with detailed execution information.
+Available when explain=True in the query.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>results = hb.multihop("Alice", ["manager", "department"], "employees")
+for r in results:
+...     print(f"Found: {r['name']} (score: {r.score:.2f})")
+...     print(f"  Path: {' -&gt; '.join(p.get('name', '?') for p in r.path)}")</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+<details class="see-also" open>
+  <summary>See Also</summary>
+  <p>SearchResult: For simple search results without path information.
+PathTrace: For detailed execution trace.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="hoptrace">HopTrace<a class="headerlink" href="#hoptrace" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.HopTrace" class="doc doc-heading">
+            <code>hybi.HopTrace</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.HopTrace" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>A single hop in a multihop query execution path.</p>
+<p>Records how many candidates existed before and after applying a filter
+at each step of a multi-hop traversal.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.HopTrace.field">field</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The column name used for this hop's filter.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.HopTrace.value">value</span></code></td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The value matched or searched for.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.HopTrace.filter_type">filter_type</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Type of filter applied - "vector" for semantic similarity,
+"exact" for exact match, "range" for numeric ranges.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.HopTrace.candidates_before">candidates_before</span></code></td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of candidate rows before this filter.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.HopTrace.candidates_after">candidates_after</span></code></td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows remaining after this filter.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>result = hb.multihop("Alice", ["manager", "department"], "employees")
+for hop in result.explanation.hops:
+...     print(f"{hop.field}: {hop.candidates_before} -&gt; {hop.candidates_after}")</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="pathtrace">PathTrace<a class="headerlink" href="#pathtrace" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.PathTrace" class="doc doc-heading">
+            <code>hybi.PathTrace</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.PathTrace" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Structured explanation of multihop query execution.</p>
+<p>Provides both machine-readable hop data and human-readable trace lines
+for debugging and understanding query execution paths.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.PathTrace.initial_filters_matched">initial_filters_matched</span></code></td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Rows matching the initial query before traversal.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.PathTrace.final_result_count">final_result_count</span></code></td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of results after all hops completed.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.PathTrace.hops">hops</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="hybi.HopTrace
+
+
+  
+      dataclass
+   (hybi.models.search.HopTrace)" href="#hybi.HopTrace">HopTrace</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of HopTrace objects, one per traversal step.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.PathTrace.trace">trace</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Pre-formatted human-readable explanation lines from the server.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>result = hb.multihop("Alice", ["manager", "department"], "employees")
+print(result.explanation)  # Full trace
+print(result.explanation.summary())  # "10 initial -&gt; 3 results via 2 hops"</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.PathTrace.__str__" class="doc doc-heading">
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+
+<a href="#hybi.PathTrace.__str__" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Print the full trace.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.PathTrace.summary" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">summary</span><span class="p">()</span></code>
+
+<a href="#hybi.PathTrace.summary" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>One-line summary of the path.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><h2 id="query-results">Query Results<a class="headerlink" href="#query-results" title="Permanent link">&para;</a></h2>
+<h3 id="selectresult">SelectResult<a class="headerlink" href="#selectresult" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.SelectResult" class="doc doc-heading">
+            <code>hybi.SelectResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.SelectResult" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Result from a SQL-like SELECT query.</p>
+<p>Iterable collection of rows matching the query conditions.
+Supports len() and iteration.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.SelectResult.rows">rows</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of row dictionaries. Each dict maps column names to values.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.SelectResult.total_rows">total_rows</span></code></td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Total matching rows in the collection (may exceed len(rows)
+if LIMIT was applied).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.SelectResult.execution_time_ms">execution_time_ms</span></code></td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Query execution time in milliseconds.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>result = hb.select({"status": "active"}, collection="users", limit=10)
+print(f"Showing {len(result)} of {result.total_rows} total")
+for row in result:
+...     print(row['email'])</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+<details class="see-also" open>
+  <summary>See Also</summary>
+  <p>AggregateResult: For GROUP BY aggregation queries.
+JoinResult: For cross-collection JOIN queries.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="aggregateresult">AggregateResult<a class="headerlink" href="#aggregateresult" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.AggregateResult" class="doc doc-heading">
+            <code>hybi.AggregateResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.AggregateResult" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Result from a GROUP BY aggregation query.</p>
+<p>Iterable collection of aggregation groups with computed values.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.AggregateResult.groups">groups</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of group dictionaries. Each contains the group key(s)
+and aggregated value(s). Keys match the group_by fields;
+values are named by the aggregation function (e.g., "count", "sum").</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.AggregateResult.total_groups">total_groups</span></code></td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Total number of distinct groups.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.AggregateResult.execution_time_ms">execution_time_ms</span></code></td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Query execution time in milliseconds.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>result = hb.aggregate(
+...     group_by="department",
+...     field="salary",
+...     function="avg",
+...     collection="employees"
+... )
+for group in result:
+...     print(f"{group['department']}: ${group['avg']:.2f}")</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+<details class="see-also" open>
+  <summary>See Also</summary>
+  <p>SelectResult: For filtering without aggregation.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="joinresult">JoinResult<a class="headerlink" href="#joinresult" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.JoinResult" class="doc doc-heading">
+            <code>hybi.JoinResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.JoinResult" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Result from a cross-collection JOIN query.</p>
+<p>Contains merged rows from two collections based on matching criteria.
+Column names are prefixed with collection names to avoid conflicts.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.JoinResult.rows">rows</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of joined row dictionaries. Keys are prefixed:
+"left_collection.column" and "right_collection.column".</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.JoinResult.total_rows">total_rows</span></code></td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Total matching joined rows.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.JoinResult.execution_time_ms">execution_time_ms</span></code></td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Query execution time in milliseconds.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>result = hb.join(
+...     "employees", "departments",
+...     on=("dept_id", "id")
+... )
+for row in result:
+...     print(f"{row['employees.name']} in {row['departments.name']}")</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+<details class="see-also" open>
+  <summary>See Also</summary>
+  <p>SelectResult: For single-collection queries.
+Intersection: For declaring joinable relationships.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><h2 id="rag-models">RAG Models<a class="headerlink" href="#rag-models" title="Permanent link">&para;</a></h2>
+<h3 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.Context" class="doc doc-heading">
+            <code>hybi.Context</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.Context" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Retrieved context ready for LLM consumption.</p>
+<p>Assembles relevant chunks into a single text block with token counting
+for context window management.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Context.text">text</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Concatenated chunk contents, formatted for LLM input.
+Use str(context) to get this value.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Context.chunks">chunks</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="hybi.Chunk
+
+
+  
+      dataclass
+   (hybi.models.rag.Chunk)" href="#hybi.Chunk">Chunk</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Individual Chunk objects that comprise this context,
+ordered by relevance score (highest first).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Context.token_count">token_count</span></code></td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Estimated token count using tiktoken cl100k_base.
+Use for context window budgeting.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Context.query">query</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The original query used to retrieve this context.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>context = hb.get_context("quarterly revenue", collection="reports")
+print(f"Retrieved {len(context.chunks)} chunks ({context.token_count} tokens)")</p>
+<h3 id="hybi.Context--use-in-llm-prompt">Use in LLM prompt<a class="headerlink" href="#hybi.Context--use-in-llm-prompt" title="Permanent link">&para;</a></h3>
+<p>prompt = f"Context:\n{context}\n\nQuestion: {context.query}"</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+<details class="see-also" open>
+  <summary>See Also</summary>
+  <p>Chunk: Individual document segments within context.
+Answer: End-to-end RAG response with generated text.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="answer">Answer<a class="headerlink" href="#answer" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.Answer" class="doc doc-heading">
+            <code>hybi.Answer</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.Answer" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Response from an end-to-end RAG query.</p>
+<p>Contains the generated answer text, source citations, and metadata
+about the generation process.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Answer.text">text</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The generated answer text. Use str(answer) to get this.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Answer.sources">sources</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="hybi.Source
+
+
+  
+      dataclass
+   (hybi.models.rag.Source)" href="#hybi.Source">Source</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of Source objects citing the retrieved documents
+used to generate this answer, ordered by relevance.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Answer.confidence">confidence</span></code></td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Model's confidence in the answer (0.0 to 1.0).
+Lower values may indicate insufficient context.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Answer.model">model</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the LLM model used for generation.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Answer.query">query</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The original question asked.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>answer = hb.ask("Summarize the project status", collection="docs")
+print(answer)
+if answer.confidence &lt; 0.7:
+...     print("Warning: Low confidence answer")
+print(f"\nGenerated by: {answer.model}")</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+<details class="see-also" open>
+  <summary>See Also</summary>
+  <p>Context: For retrieving context without generation.
+Source: Individual citation in the sources list.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="chunk">Chunk<a class="headerlink" href="#chunk" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.Chunk" class="doc doc-heading">
+            <code>hybi.Chunk</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.Chunk" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>A document chunk retrieved for RAG context.</p>
+<p>Represents a segment of a document that matched the query,
+with relevance score and source metadata.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Chunk.content">content</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The text content of this chunk.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Chunk.score">score</span></code></td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Relevance score between 0.0 and 1.0.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Chunk.metadata">metadata</span></code></td>
+            <td>
+                  <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Source information dict. Common keys include:
+- "source": Original filename or URL
+- "page": Page number (for PDFs)
+- "section": Section heading</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Chunk.id">id</span></code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="int">int</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional row identifier in the source collection.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>context = hb.get_context("What is RAG?", collection="docs")
+for chunk in context.chunks:
+...     print(f"[{chunk.score:.2f}] {chunk.content[:100]}...")
+...     print(f"  Source: {chunk.metadata.get('source', 'unknown')}")</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+<details class="see-also" open>
+  <summary>See Also</summary>
+  <p>Context: Assembled context containing multiple chunks.
+Source: Similar structure used in Answer citations.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="source">Source<a class="headerlink" href="#source" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.Source" class="doc doc-heading">
+            <code>hybi.Source</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.Source" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>A source reference in a RAG answer.</p>
+<p>Similar to Chunk but represents a citation in a generated answer,
+linking claims to their source documents.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Source.content">content</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The relevant text excerpt from the source.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Source.score">score</span></code></td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Relevance score used when selecting this source (0.0 to 1.0).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.Source.metadata">metadata</span></code></td>
+            <td>
+                  <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Source information dict with keys like "source", "page".</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>answer = hb.ask("What are the Q3 results?", collection="reports")
+print(answer.text)
+print("\nSources:")
+for src in answer.sources:
+...     print(f"  - {src.metadata.get('source')}: {src.content[:50]}...")</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+<details class="see-also" open>
+  <summary>See Also</summary>
+  <p>Chunk: Similar structure used in Context retrieval.
+Answer: Contains list of Source citations.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><h2 id="collection-models">Collection Models<a class="headerlink" href="#collection-models" title="Permanent link">&para;</a></h2>
+<h3 id="collectioninfo">CollectionInfo<a class="headerlink" href="#collectioninfo" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.CollectionInfo" class="doc doc-heading">
+            <code>hybi.CollectionInfo</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.CollectionInfo" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Basic information about a collection.</p>
+<p>Lightweight metadata returned by list_collections() and collection checks.
+For detailed statistics, use CollectionStats via get_collection_stats().</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.CollectionInfo.name">name</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Collection name (unique identifier).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.CollectionInfo.rows">rows</span></code></td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the collection.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.CollectionInfo.columns">columns</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of column names.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.CollectionInfo.has_semantic">has_semantic</span></code></td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>True if semantic (vector) search is enabled.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.CollectionInfo.has_symbolic">has_symbolic</span></code></td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>True if symbolic (exact/SQL) queries are enabled.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.CollectionInfo.created_at">created_at</span></code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>ISO timestamp when collection was created, or None.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.CollectionInfo.type">type</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Collection type - "structured" for tabular data,
+"document" for ingested documents (PDF, DOCX, etc.).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>collections = hb.list_collections()
+for c in collections:
+...     search_type = "semantic" if c.has_semantic else "symbolic"
+...     print(f"{c.name}: {c.rows} rows ({search_type})")</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+<details class="see-also" open>
+  <summary>See Also</summary>
+  <p>CollectionStats: For detailed collection statistics.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="collectionstats">CollectionStats<a class="headerlink" href="#collectionstats" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.CollectionStats" class="doc doc-heading">
+            <code>hybi.CollectionStats</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.CollectionStats" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Detailed statistics about a collection.</p>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>stats = hb.collection("customers").stats()
+print(stats)  # "customers: 1000 rows, 5 columns (structured)"
+print(f"Vector dimension: {stats.dimension}")</p>
+<h3 id="hybi.CollectionStats--access-stored-compose-schema">Access stored Compose schema<a class="headerlink" href="#hybi.CollectionStats--access-stored-compose-schema" title="Permanent link">&para;</a></h3>
+<p>if stats.template_name:
+    schema = stats.get_schema()
+    print(f"Schema type: {schema.molecule_type}")</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.CollectionStats.schema_version" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">schema_version</span> <span class="o">=</span> <span class="mi">1</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.CollectionStats.schema_version" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Version number for the schema, incremented on each change.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.CollectionStats.evolution_mode" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">evolution_mode</span> <span class="o">=</span> <span class="s1">&#39;adaptive&#39;</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.CollectionStats.evolution_mode" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Schema evolution mode: 'adaptive', 'strict', or 'locked'.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.CollectionStats.reasoning_enabled" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">reasoning_enabled</span> <span class="o">=</span> <span class="kc">False</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.CollectionStats.reasoning_enabled" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Whether MHV reasoning is enabled for this collection (paid feature).</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.CollectionStats.reasoning_config" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">reasoning_config</span> <span class="o">=</span> <span class="kc">None</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.CollectionStats.reasoning_config" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Reasoning engine configuration (dim, size, relations, etc.).</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.CollectionStats.reasoning_model_version" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">reasoning_model_version</span> <span class="o">=</span> <span class="kc">None</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.CollectionStats.reasoning_model_version" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Version identifier for the trained reasoning model.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.CollectionStats.reasoning_trained_at" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">reasoning_trained_at</span> <span class="o">=</span> <span class="kc">None</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.CollectionStats.reasoning_trained_at" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>ISO timestamp when reasoning model was last trained.</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.CollectionStats.get_schema" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_schema</span><span class="p">()</span></code>
+
+<a href="#hybi.CollectionStats.get_schema" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Deserialize stored schema to molecule object.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="hybi.compose.molecules.BaseMolecule">BaseMolecule</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>BaseMolecule instance (Triple, Record, etc.) or None if no schema stored.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>stats = hb.collection("facts").stats()
+schema = stats.get_schema()
+if schema:
+    print(f"Schema: {schema.molecule_type}")
+    print(f"Slots: {schema.slots()}")</p>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.CollectionStats.get_evolution_mode" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_evolution_mode</span><span class="p">()</span></code>
+
+<a href="#hybi.CollectionStats.get_evolution_mode" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get the schema evolution mode as an enum value.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="hybi.compose.SchemaEvolution (hybi.compose.fields.SchemaEvolution)" href="../compose/fields/#hybi.compose.SchemaEvolution">SchemaEvolution</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>SchemaEvolution enum value</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.CollectionStats.get_reasoning_config" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_reasoning_config</span><span class="p">()</span></code>
+
+<a href="#hybi.CollectionStats.get_reasoning_config" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get the reasoning configuration if available.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="hybi.reasoning.types.ReasoningConfig">ReasoningConfig</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>ReasoningConfig instance or None if reasoning not configured.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>stats = hb.collection("org").stats()
+if stats.reasoning_enabled:
+    config = stats.get_reasoning_config()
+    print(f"Relations: {config.relations}")</p>
+</details>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="ingestresult">IngestResult<a class="headerlink" href="#ingestresult" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.IngestResult" class="doc doc-heading">
+            <code>hybi.IngestResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.IngestResult" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Result from a data ingestion operation.</p>
+<p>Returned by ingest() to confirm successful data loading.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.IngestResult.collection">collection</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the collection data was ingested into.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.IngestResult.rows_ingested">rows_ingested</span></code></td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows successfully ingested.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.IngestResult.status">status</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Operation status - "success", "partial", or "error".</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.IngestResult.columns">columns</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of column names in the ingested data.
+Empty list if ingesting documents.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="hybi.IngestResult.message">message</span></code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional status message with details about the operation,
+especially useful for partial success or errors.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>result = hb.ingest("data.csv", collection="customers")
+print(f"Ingested {result.rows_ingested} rows into {result.collection}")
+if result.status != "success":
+...     print(f"Warning: {result.message}")</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+
+<details class="see-also" open>
+  <summary>See Also</summary>
+  <p>CollectionStats: For checking collection state after ingestion.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>

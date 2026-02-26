@@ -1,0 +1,2019 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Python SDK for the HyperBinder neurosymbolic database">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../molecules-vs-compounds/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>The Compose System - HyperBinder SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-compose-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HyperBinder SDK" class="md-header__button md-logo" aria-label="HyperBinder SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HyperBinder SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Compose System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hyperbinder/sdk" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HyperBinder SDK" class="md-nav__button md-logo" aria-label="HyperBinder SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HyperBinder SDK
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hyperbinder/sdk" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    The Compose System
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    The Compose System
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Compose?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Compose?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem-with-traditional-vector-dbs" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Problem with Traditional Vector DBs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-hdc-enables" class="md-nav__link">
+    <span class="md-ellipsis">
+      What HDC Enables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Layers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#molecules-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Molecules (Building Blocks)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compounds-domain-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compounds (Domain Templates)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structured-vs-search-optimized-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structured vs Search-Optimized Encoding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structured vs Search-Optimized Encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structured-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structured Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-optimized-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search-Optimized Encoding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encoding-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encoding Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nesting-molecules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nesting Molecules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unique-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unique Capabilities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unique Capabilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analogical-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analogical Reasoning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slot-specific-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slot-Specific Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuzzy-graph-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fuzzy Graph Traversal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prototype-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prototype Search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intersections-the-glue-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intersections: The Glue Layer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intersections: The Glue Layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaring-intersections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaring Intersections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querying-across-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Querying Across Collections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relation Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-bridge-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bridge Pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-contract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema = Contract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../molecules-vs-compounds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Molecules vs Compounds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intersections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Client
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Client
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HyperBinder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/compose/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Compose
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Compose
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/compose/molecules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Molecules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/compose/compounds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compounds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/compose/fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fields & Encoding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/compose/query/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Query Builder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/compose/validation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/compose/intersections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/exceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../observability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../examples/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/unified-intelligence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unified Intelligence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/fictional-universes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fictional Universes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/ecommerce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E-Commerce Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/enterprise-knowledge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterprise Knowledge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/fuzzy-to-exact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuzzy-to-Exact Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/intersections-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersections Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Compose?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Compose?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem-with-traditional-vector-dbs" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Problem with Traditional Vector DBs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-hdc-enables" class="md-nav__link">
+    <span class="md-ellipsis">
+      What HDC Enables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Layers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#molecules-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Molecules (Building Blocks)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compounds-domain-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compounds (Domain Templates)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structured-vs-search-optimized-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structured vs Search-Optimized Encoding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structured vs Search-Optimized Encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structured-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structured Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-optimized-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search-Optimized Encoding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encoding-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encoding Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nesting-molecules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nesting Molecules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unique-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unique Capabilities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unique Capabilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analogical-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analogical Reasoning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slot-specific-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slot-Specific Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuzzy-graph-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fuzzy Graph Traversal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prototype-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prototype Search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intersections-the-glue-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intersections: The Glue Layer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intersections: The Glue Layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaring-intersections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaring Intersections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querying-across-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Querying Across Collections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relation Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-bridge-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bridge Pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-contract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema = Contract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="the-compose-system">The Compose System<a class="headerlink" href="#the-compose-system" title="Permanent link">&para;</a></h1>
+<p>Compose is HyperBinder's schema system that exposes the power of Hyperdimensional Computing (HDC) through a clean, typed API.</p>
+<h2 id="why-compose">Why Compose?<a class="headerlink" href="#why-compose" title="Permanent link">&para;</a></h2>
+<h3 id="the-problem-with-traditional-vector-dbs">The Problem with Traditional Vector DBs<a class="headerlink" href="#the-problem-with-traditional-vector-dbs" title="Permanent link">&para;</a></h3>
+<p>Traditional vector databases treat embeddings as black boxes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Data → Embedding → Similarity Search
+</code></pre></div>
+<p>You can ask "what's similar?" but you <strong>cannot</strong>:</p>
+<ul>
+<li>Decompose a vector to extract components</li>
+<li>Query specific structural slots</li>
+<li>Perform analogical reasoning</li>
+<li>Traverse relationships semantically</li>
+</ul>
+<h3 id="what-hdc-enables">What HDC Enables<a class="headerlink" href="#what-hdc-enables" title="Permanent link">&para;</a></h3>
+<p>Hyperdimensional Computing provides <strong>compositional operations</strong> on vectors that preserve structural relationships:</p>
+<ul>
+<li><strong>Structure encoding</strong>: Combine vectors while preserving their relationship</li>
+<li><strong>Structural decomposition</strong>: Extract components from composed structures</li>
+<li><strong>Set representation</strong>: Represent collections of items in a single vector</li>
+</ul>
+<p><strong>Key insight</strong>: Unlike traditional embeddings, HyperBinder's encoding is compositional. If you encode a triple (Subject, Predicate, Object), you can later decompose it to extract individual components.</p>
+<h2 id="the-layers">The Layers<a class="headerlink" href="#the-layers" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    subgraph atoms [ATOMS - Advanced]
+        a["bind, unbind,&lt;br/&gt;bundle, similarity"]
+    end
+
+    subgraph molecules [MOLECULES]
+        m["Pair, Triple, Bundle,&lt;br/&gt;Sequence, Tree, Graph"]
+    end
+
+    subgraph compounds [COMPOUNDS]
+        c["KnowledgeGraph, TimeSeries,&lt;br/&gt;Hierarchy, Document, Network"]
+    end
+
+    atoms -.-&gt; molecules --&gt; compounds</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Atoms are an internal implementation detail, described here for completeness.</p>
+<p>Atoms (bind, unbind, bundle) are low-level HDC primitives that molecules are built from.</p>
+</div>
+<h3 id="molecules-building-blocks">Molecules (Building Blocks)<a class="headerlink" href="#molecules-building-blocks" title="Permanent link">&para;</a></h3>
+<p>The core structures you define schemas with. Each molecule defines:</p>
+<ol>
+<li><strong>Structure</strong>: The shape of your data</li>
+<li><strong>Slots</strong>: Named positions in the structure</li>
+<li><strong>Queries</strong>: What operations are supported</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Molecule</th>
+<th>Slots</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pair</strong></td>
+<td>left, right</td>
+<td>Key-value, edges</td>
+</tr>
+<tr>
+<td><strong>Triple</strong></td>
+<td>subject, predicate, object</td>
+<td>Knowledge graphs</td>
+</tr>
+<tr>
+<td><strong>Bundle</strong></td>
+<td>User-defined fields</td>
+<td>Tabular data</td>
+</tr>
+<tr>
+<td><strong>Sequence</strong></td>
+<td>item</td>
+<td>Ordered data</td>
+</tr>
+<tr>
+<td><strong>Tree</strong></td>
+<td>child, parent</td>
+<td>Hierarchies</td>
+</tr>
+<tr>
+<td><strong>Graph</strong></td>
+<td>source, edge, target</td>
+<td>Networks</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">Triple</span><span class="p">,</span> <span class="n">Field</span><span class="p">,</span> <span class="n">Encoding</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">schema</span> <span class="o">=</span> <span class="n">Triple</span><span class="p">(</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">subject</span><span class="o">=</span><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;entity&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">SEMANTIC</span><span class="p">),</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">predicate</span><span class="o">=</span><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;relation&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">EXACT</span><span class="p">),</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="nb">object</span><span class="o">=</span><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">SEMANTIC</span><span class="p">),</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">)</span>
+</code></pre></div>
+<h3 id="compounds-domain-templates">Compounds (Domain Templates)<a class="headerlink" href="#compounds-domain-templates" title="Permanent link">&para;</a></h3>
+<p>Pre-configured molecules optimized for common use cases. They expand to molecules at definition time.</p>
+<table>
+<thead>
+<tr>
+<th>Compound</th>
+<th>Expands To</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>KnowledgeGraph</strong></td>
+<td>Triple</td>
+<td>Entity-relation-entity facts</td>
+</tr>
+<tr>
+<td><strong>TimeSeries</strong></td>
+<td>Sequence</td>
+<td>Time-ordered data</td>
+</tr>
+<tr>
+<td><strong>Hierarchy</strong></td>
+<td>Tree</td>
+<td>Org charts, taxonomies</td>
+</tr>
+<tr>
+<td><strong>Document</strong></td>
+<td>Bundle</td>
+<td>Document chunks with metadata</td>
+</tr>
+<tr>
+<td><strong>Network</strong></td>
+<td>Graph</td>
+<td>Social graphs, citation networks</td>
+</tr>
+<tr>
+<td><strong>Catalog</strong></td>
+<td>Bundle</td>
+<td>Generic tabular data</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">KnowledgeGraph</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># This is equivalent to defining a Triple with sensible defaults</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">schema</span> <span class="o">=</span> <span class="n">KnowledgeGraph</span><span class="p">(</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">entity_field</span><span class="o">=</span><span class="s2">&quot;entity&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">relation_field</span><span class="o">=</span><span class="s2">&quot;relation&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">)</span>
+</code></pre></div>
+<h2 id="structured-vs-search-optimized-encoding">Structured vs Search-Optimized Encoding<a class="headerlink" href="#structured-vs-search-optimized-encoding" title="Permanent link">&para;</a></h2>
+<p>Molecules use different encoding strategies optimized for different use cases:</p>
+<h3 id="structured-encoding">Structured Encoding<a class="headerlink" href="#structured-encoding" title="Permanent link">&para;</a></h3>
+<p>Used by: Pair, Triple, Tree, Graph, Sequence</p>
+<ul>
+<li><strong>Fully decomposable</strong>: Extract individual components from queries</li>
+<li><strong>High precision</strong>: Exact matches score ~1.0</li>
+<li><strong>Enables</strong>: Slot-specific queries, traversal, structural decomposition</li>
+</ul>
+<h3 id="search-optimized-encoding">Search-Optimized Encoding<a class="headerlink" href="#search-optimized-encoding" title="Permanent link">&para;</a></h3>
+<p>Used by: Bundle</p>
+<ul>
+<li><strong>Multi-field search</strong>: Search across many fields simultaneously</li>
+<li><strong>Similarity-based</strong>: Optimized for semantic similarity matching</li>
+<li><strong>Trade-off</strong>: Lower precision for faster multi-field search</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Bundle limitations</p>
+<p>Bundle uses search-optimized encoding, which means:</p>
+<ul>
+<li>Individual fields cannot be reliably extracted</li>
+<li>Bundles cannot be nested inside other molecules</li>
+<li>Similarity scores decrease with field count</li>
+</ul>
+</div>
+<h2 id="encoding-types">Encoding Types<a class="headerlink" href="#encoding-types" title="Permanent link">&para;</a></h2>
+<p>Fields can have different encoding strategies:</p>
+<table>
+<thead>
+<tr>
+<th>Encoding</th>
+<th>Behavior</th>
+<th>Use When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SEMANTIC</code></td>
+<td>Similar values → similar vectors</td>
+<td>Names, descriptions, text</td>
+</tr>
+<tr>
+<td><code>EXACT</code></td>
+<td>Each unique value → distinct vector</td>
+<td>IDs, categories, relations</td>
+</tr>
+<tr>
+<td><code>NUMERIC</code></td>
+<td>Numbers close in value → similar vectors</td>
+<td>Prices, counts, ratings</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">SEMANTIC</span><span class="p">)</span>  <span class="c1"># Semantic similarity</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">EXACT</span><span class="p">)</span>        <span class="c1"># Exact matching</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">NUMERIC</span><span class="p">,</span> <span class="n">similar_within</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>  <span class="c1"># $50 = similar</span>
+</code></pre></div>
+<h2 id="nesting-molecules">Nesting Molecules<a class="headerlink" href="#nesting-molecules" title="Permanent link">&para;</a></h2>
+<p>Structured molecules can be nested inside each other:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Typed entity knowledge graph</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">schema</span> <span class="o">=</span> <span class="n">Triple</span><span class="p">(</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">subject</span><span class="o">=</span><span class="n">Pair</span><span class="p">(</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="n">left</span><span class="o">=</span><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;entity_type&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">EXACT</span><span class="p">),</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="n">right</span><span class="o">=</span><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;entity_name&quot;</span><span class="p">),</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="p">),</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="n">predicate</span><span class="o">=</span><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;relation&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">EXACT</span><span class="p">),</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="nb">object</span><span class="o">=</span><span class="n">Pair</span><span class="p">(</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        <span class="n">left</span><span class="o">=</span><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;target_type&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">EXACT</span><span class="p">),</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>        <span class="n">right</span><span class="o">=</span><span class="n">Field</span><span class="p">(</span><span class="s2">&quot;target_name&quot;</span><span class="p">),</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="p">),</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">)</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1"># Nested structure is fully decomposable!</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nesting rules</p>
+<ul>
+<li>Structured molecules (Pair, Triple, Tree, Graph, Sequence) can nest</li>
+<li>Bundle <strong>cannot</strong> be nested (uses search-optimized encoding)</li>
+<li>Validation happens at construction time</li>
+</ul>
+</div>
+<h2 id="unique-capabilities">Unique Capabilities<a class="headerlink" href="#unique-capabilities" title="Permanent link">&para;</a></h2>
+<p>These operations are <strong>impossible</strong> with traditional vector databases:</p>
+<h3 id="analogical-reasoning">Analogical Reasoning<a class="headerlink" href="#analogical-reasoning" title="Permanent link">&para;</a></h3>
+<p>Find D where A:B :: C:D</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Einstein:Relativity :: Darwin:?</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">results</span> <span class="o">=</span> <span class="n">hb</span><span class="o">.</span><span class="n">analogy</span><span class="p">(</span><span class="s2">&quot;Einstein&quot;</span><span class="p">,</span> <span class="s2">&quot;Relativity&quot;</span><span class="p">,</span> <span class="s2">&quot;Darwin&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>                     <span class="n">field_name</span><span class="o">=</span><span class="s2">&quot;subject&quot;</span><span class="p">,</span> <span class="n">collection</span><span class="o">=</span><span class="s2">&quot;facts&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Finds &quot;Evolution&quot; - the relation Darwin has like Einstein→Relativity</span>
+</code></pre></div>
+<h3 id="slot-specific-search">Slot-Specific Search<a class="headerlink" href="#slot-specific-search" title="Permanent link">&para;</a></h3>
+<p>Search within a single structural slot:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">q</span> <span class="o">=</span> <span class="n">hb</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;facts&quot;</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># Search only in the subject slot</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">results</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;physicist&quot;</span><span class="p">,</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;subject&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># Multi-slot with different weights</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">results</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">search_slots</span><span class="p">({</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="s2">&quot;subject&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Einstein&quot;</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">),</span>  <span class="c1"># Double weight</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="s2">&quot;object&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;physics&quot;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">})</span>
+</code></pre></div>
+<h3 id="fuzzy-graph-traversal">Fuzzy Graph Traversal<a class="headerlink" href="#fuzzy-graph-traversal" title="Permanent link">&para;</a></h3>
+<p>Semantic path following (not just exact matching):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">results</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">traverse_fuzzy</span><span class="p">(</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">start</span><span class="o">=</span><span class="s2">&quot;Albert Einstein&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">start_slot</span><span class="o">=</span><span class="s2">&quot;subject&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">path</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;worked_at&quot;</span><span class="p">,</span> <span class="s2">&quot;located_in&quot;</span><span class="p">],</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">hop_threshold</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>  <span class="c1"># Minimum similarity per hop</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">)</span>
+</code></pre></div>
+<h3 id="prototype-search">Prototype Search<a class="headerlink" href="#prototype-search" title="Permanent link">&para;</a></h3>
+<p>Find items similar to ANY of multiple examples:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">results</span> <span class="o">=</span> <span class="n">hb</span><span class="o">.</span><span class="n">search_prototype</span><span class="p">(</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">examples</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Dune&quot;</span><span class="p">,</span> <span class="s2">&quot;Foundation&quot;</span><span class="p">,</span> <span class="s2">&quot;Neuromancer&quot;</span><span class="p">],</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="n">field_name</span><span class="o">=</span><span class="s2">&quot;title&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="n">collection</span><span class="o">=</span><span class="s2">&quot;books&quot;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">)</span>
+</code></pre></div>
+<h2 id="intersections-the-glue-layer">Intersections: The Glue Layer<a class="headerlink" href="#intersections-the-glue-layer" title="Permanent link">&para;</a></h2>
+<p>Collections are isolated by default. <strong>Intersections</strong> declare relationships between collections, enabling cross-collection queries via <code>.join()</code>.</p>
+<pre class="mermaid"><code>flowchart LR
+    E[Employees] &lt;--&gt;|identity| X[Expertise] &lt;--&gt;|identity| P[Projects]</code></pre>
+<p><code>employees.id = expertise.employee_id</code> · <code>expertise.project_id = projects.id</code></p>
+<h3 id="declaring-intersections">Declaring Intersections<a class="headerlink" href="#declaring-intersections" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Connect employees to their expertise</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">hb</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="s2">&quot;employees.employee_id&quot;</span><span class="p">,</span> <span class="s2">&quot;expertise.subject&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Connect expertise to projects</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">hb</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="s2">&quot;expertise.project_id&quot;</span><span class="p">,</span> <span class="s2">&quot;projects.id&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="querying-across-collections">Querying Across Collections<a class="headerlink" href="#querying-across-collections" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Start in employees, join through expertise to projects</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">results</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="n">hb</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;employees&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;senior engineer&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;expertise&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;projects&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">)</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">source</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> → </span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">target</span><span class="p">[</span><span class="s1">&#39;project_name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="relation-types">Relation Types<a class="headerlink" href="#relation-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Relation</th>
+<th>Matching</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"identity"</code></td>
+<td>Exact value equality</td>
+<td>IDs, foreign keys</td>
+</tr>
+<tr>
+<td><code>"semantic"</code></td>
+<td>Embedding similarity</td>
+<td>Text content, descriptions</td>
+</tr>
+<tr>
+<td><code>"link"</code></td>
+<td>Explicit value mappings</td>
+<td>Cross-encoding fields (flexible mode)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-bridge-pattern">The Bridge Pattern<a class="headerlink" href="#the-bridge-pattern" title="Permanent link">&para;</a></h3>
+<p>Intersections enable a powerful pattern for connecting heterogeneous data:</p>
+<pre class="mermaid"><code>flowchart LR
+    D["Documents&lt;br/&gt;(Fuzzy)"] &lt;--&gt;|semantic| K["Knowledge Graph&lt;br/&gt;(Entity Hub)"] &lt;--&gt;|identity| T["Catalogs&lt;br/&gt;(Exact)"]</code></pre>
+<p>The Knowledge Graph acts as a semantic index bridging fuzzy text mentions to exact structured lookups.</p>
+<p>See <a href="../../api/compose/intersections/">Intersections API</a> for full documentation.</p>
+<hr />
+<h2 id="schema-contract">Schema = Contract<a class="headerlink" href="#schema-contract" title="Permanent link">&para;</a></h2>
+<p>A schema isn't just metadata - it's a <strong>contract</strong> that determines:</p>
+<ol>
+<li><strong>What queries are valid</strong>: <code>find(subject=X)</code> only works on Triple</li>
+<li><strong>How data is encoded</strong>: Chain vs bundle, semantic vs exact</li>
+<li><strong>What results contain</strong>: Schema-aware result objects</li>
+</ol>
+<p>Invalid queries fail with clear errors:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">q</span> <span class="o">=</span> <span class="n">hb</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;facts&quot;</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">triple_schema</span><span class="p">)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">q</span><span class="o">.</span><span class="n">children</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">)</span>  <span class="c1"># SchemaError: &#39;children&#39; requires Tree schema</span>
+</code></pre></div>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../molecules-vs-compounds/">Molecules vs Compounds</a> - Choosing the right schema</li>
+<li><a href="../../api/compose/molecules/">API Reference: Molecules</a> - Full molecule documentation</li>
+<li><a href="../../api/compose/fields/">API Reference: Fields</a> - Field configuration options</li>
+<li><a href="../../api/compose/intersections/">API Reference: Intersections</a> - Cross-collection queries</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>

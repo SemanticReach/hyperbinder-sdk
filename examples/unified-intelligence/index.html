@@ -1,0 +1,1953 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Python SDK for the HyperBinder neurosymbolic database">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../fictional-universes/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Unified Intelligence - HyperBinder SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unified-intelligence-demo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HyperBinder SDK" class="md-header__button md-logo" aria-label="HyperBinder SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HyperBinder SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unified Intelligence
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hyperbinder/sdk" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HyperBinder SDK" class="md-nav__button md-logo" aria-label="HyperBinder SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HyperBinder SDK
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hyperbinder/sdk" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../concepts/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Compose System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/molecules-vs-compounds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Molecules vs Compounds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/embeddings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Embeddings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/intersections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Client
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Client
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HyperBinder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/compose/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Compose
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Compose
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/compose/molecules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Molecules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/compose/compounds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compounds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/compose/fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fields & Encoding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/compose/query/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Query Builder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/compose/validation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/compose/intersections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/exceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../observability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Observability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Unified Intelligence
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Unified Intelligence
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-knowledge-design-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Knowledge Design Layer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Scenario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traditional-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traditional Approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyperbinder-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      HyperBinder Approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-makes-this-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes This Unique
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Makes This Unique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-unified-query-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Unified Query Language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cross-encoding-joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cross-Encoding Joins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-declarative-not-procedural" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Declarative, Not Procedural
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-type-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Type-Safe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-composable" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Composable
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Capabilities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Capabilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analogical-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analogical Reasoning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidirectional-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bidirectional Traversal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prototype-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prototype Search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Demo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compound-combinations-model-any-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compound Combinations: Model Any Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compound Combinations: Model Any Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-healthcare-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Healthcare System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-legal-research-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Legal Research Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-research-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Research Knowledge Base
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fictional-universes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fictional Universes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecommerce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E-Commerce Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enterprise-knowledge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterprise Knowledge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fuzzy-to-exact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fuzzy-to-Exact Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intersections-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersections Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-knowledge-design-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Knowledge Design Layer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Scenario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traditional-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traditional Approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyperbinder-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      HyperBinder Approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-makes-this-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes This Unique
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Makes This Unique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-unified-query-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Unified Query Language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cross-encoding-joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cross-Encoding Joins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-declarative-not-procedural" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Declarative, Not Procedural
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-type-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Type-Safe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-composable" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Composable
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Capabilities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Capabilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analogical-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analogical Reasoning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidirectional-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bidirectional Traversal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prototype-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prototype Search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Demo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compound-combinations-model-any-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compound Combinations: Model Any Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compound Combinations: Model Any Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-healthcare-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Healthcare System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-legal-research-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Legal Research Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-research-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Research Knowledge Base
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="unified-intelligence-demo">Unified Intelligence Demo<a class="headerlink" href="#unified-intelligence-demo" title="Permanent link">&para;</a></h1>
+<p>This demo showcases HyperBinder's unique ability to seamlessly traverse between semantic (fuzzy) and symbolic (exact) data in a single query chain—something that traditionally requires complex multi-system orchestration.</p>
+<h2 id="the-knowledge-design-layer">The Knowledge Design Layer<a class="headerlink" href="#the-knowledge-design-layer" title="Permanent link">&para;</a></h2>
+<p>Modern AI stacks have a gap. LLMs need <strong>structured knowledge</strong>, but data lives in fragmented systems. HyperBinder fills this gap with a <strong>Knowledge Design Layer</strong>:</p>
+<pre class="mermaid"><code>flowchart TB
+    A["LLMs · Agents · RAG"]
+    K["&lt;b&gt;KNOWLEDGE DESIGN LAYER&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Compounds · Intersections · Queries&lt;/i&gt;"]
+    D["Your Data Sources"]
+
+    A &lt;--&gt;|"Declarative queries"| K
+    K &lt;--&gt;|"Ingestion"| D
+
+    style K fill:#3182ce,stroke:#63b3ed,stroke-width:2px,color:#fff</code></pre>
+<p><strong>Without HyperBinder:</strong> 200+ lines of orchestration across 3+ systems per query type.</p>
+<p><strong>With HyperBinder:</strong> ~10 lines, one system, declarative.</p>
+<h2 id="the-scenario">The Scenario<a class="headerlink" href="#the-scenario" title="Permanent link">&para;</a></h2>
+<p>A product manager asks:</p>
+<blockquote>
+<p>"Who are our ML experts in Engineering, what projects are they on, and what's the budget allocation?"</p>
+</blockquote>
+<p>This simple question requires traversing:</p>
+<ol>
+<li><strong>Semantic search</strong> on employee bios</li>
+<li><strong>Exact filtering</strong> on department</li>
+<li><strong>Cross-encoding join</strong> from employee IDs to expertise topics</li>
+<li><strong>Semantic join</strong> from topics to projects</li>
+<li><strong>Exact join</strong> from projects to budgets</li>
+</ol>
+<h2 id="traditional-approach">Traditional Approach<a class="headerlink" href="#traditional-approach" title="Permanent link">&para;</a></h2>
+<p>Without HyperBinder, you'd need to orchestrate multiple systems:</p>
+<pre class="mermaid"><code>flowchart TB
+    ES["Elasticsearch"]
+    APP1["App Code"]
+    PG1["PostgreSQL"]
+    APP2["App Code"]
+    NEO["Neo4j"]
+    APP3["App Code"]
+    PG2["PostgreSQL"]
+    APP4["App Code"]
+
+    ES --&gt; APP1 --&gt; PG1 --&gt; APP2 --&gt; NEO --&gt; APP3 --&gt; PG2 --&gt; APP4
+
+    style ES fill:#c05621,stroke:#ed8936,color:#fff
+    style PG1 fill:#276749,stroke:#48bb78,color:#fff
+    style PG2 fill:#276749,stroke:#48bb78,color:#fff
+    style NEO fill:#553c9a,stroke:#9f7aea,color:#fff
+    style APP1 fill:#9b2c2c,stroke:#fc8181,color:#fff
+    style APP2 fill:#9b2c2c,stroke:#fc8181,color:#fff
+    style APP3 fill:#9b2c2c,stroke:#fc8181,color:#fff
+    style APP4 fill:#9b2c2c,stroke:#fc8181,color:#fff</code></pre>
+<p><strong>Problems with this approach:</strong></p>
+<ul>
+<li>Multiple systems to maintain (Elasticsearch, PostgreSQL, Neo4j)</li>
+<li>Complex orchestration code for each query type</li>
+<li>No type safety across system boundaries</li>
+<li>Difficult to modify query logic</li>
+<li>Performance overhead from multiple round-trips</li>
+</ul>
+<h2 id="hyperbinder-approach">HyperBinder Approach<a class="headerlink" href="#hyperbinder-approach" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi</span><span class="w"> </span><span class="kn">import</span> <span class="n">HyperBinder</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">hb</span> <span class="o">=</span> <span class="n">HyperBinder</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># === DATA SETUP ===</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># Employees (semantic search on bios)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">employees</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="p">{</span><span class="s2">&quot;employee_id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMP001&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice Chen&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>     <span class="s2">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;Senior ML engineer specializing in NLP&quot;</span><span class="p">,</span> <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;Engineering&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="p">{</span><span class="s2">&quot;employee_id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMP002&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bob Smith&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>     <span class="s2">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;Backend developer with distributed systems expertise&quot;</span><span class="p">,</span> <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;Engineering&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="p">{</span><span class="s2">&quot;employee_id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMP003&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Carol White&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>     <span class="s2">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;ML researcher focusing on computer vision&quot;</span><span class="p">,</span> <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;Research&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="p">{</span><span class="s2">&quot;employee_id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMP004&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;David Lee&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>     <span class="s2">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;Data scientist with machine learning background&quot;</span><span class="p">,</span> <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="s2">&quot;Engineering&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">])</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># Expertise topics (semantic encoding)</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">expertise</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="p">{</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;natural language processing&quot;</span><span class="p">,</span> <span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;AI&quot;</span><span class="p">,</span> <span class="s2">&quot;maturity&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="p">{</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;computer vision models&quot;</span><span class="p">,</span> <span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;AI&quot;</span><span class="p">,</span> <span class="s2">&quot;maturity&quot;</span><span class="p">:</span> <span class="s2">&quot;Research&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="p">{</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;distributed systems design&quot;</span><span class="p">,</span> <span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;Infrastructure&quot;</span><span class="p">,</span> <span class="s2">&quot;maturity&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="p">{</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;deep learning frameworks&quot;</span><span class="p">,</span> <span class="s2">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;AI&quot;</span><span class="p">,</span> <span class="s2">&quot;maturity&quot;</span><span class="p">:</span> <span class="s2">&quot;Production&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">])</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="c1"># Projects (joined via expertise)</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="n">projects</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    <span class="p">{</span><span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PROJ001&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ChatBot v2&quot;</span><span class="p">,</span> <span class="s2">&quot;focus_area&quot;</span><span class="p">:</span> <span class="s2">&quot;natural language processing&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    <span class="p">{</span><span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PROJ002&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Visual Search&quot;</span><span class="p">,</span> <span class="s2">&quot;focus_area&quot;</span><span class="p">:</span> <span class="s2">&quot;computer vision models&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    <span class="p">{</span><span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PROJ003&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Model Training Platform&quot;</span><span class="p">,</span> <span class="s2">&quot;focus_area&quot;</span><span class="p">:</span> <span class="s2">&quot;deep learning frameworks&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="p">])</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="c1"># Budgets (exact lookups)</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="n">budgets</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    <span class="p">{</span><span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PROJ001&quot;</span><span class="p">,</span> <span class="s2">&quot;allocated&quot;</span><span class="p">:</span> <span class="mi">500000</span><span class="p">,</span> <span class="s2">&quot;spent&quot;</span><span class="p">:</span> <span class="mi">320000</span><span class="p">},</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    <span class="p">{</span><span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PROJ002&quot;</span><span class="p">,</span> <span class="s2">&quot;allocated&quot;</span><span class="p">:</span> <span class="mi">750000</span><span class="p">,</span> <span class="s2">&quot;spent&quot;</span><span class="p">:</span> <span class="mi">180000</span><span class="p">},</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    <span class="p">{</span><span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PROJ003&quot;</span><span class="p">,</span> <span class="s2">&quot;allocated&quot;</span><span class="p">:</span> <span class="mi">1000000</span><span class="p">,</span> <span class="s2">&quot;spent&quot;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">},</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="p">])</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="c1"># Link mappings (employee IDs → expertise topics)</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="n">employee_expertise</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    <span class="p">{</span><span class="s2">&quot;employee_id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMP001&quot;</span><span class="p">,</span> <span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;natural language processing&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    <span class="p">{</span><span class="s2">&quot;employee_id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMP001&quot;</span><span class="p">,</span> <span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;deep learning frameworks&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    <span class="p">{</span><span class="s2">&quot;employee_id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMP003&quot;</span><span class="p">,</span> <span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;computer vision models&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>    <span class="p">{</span><span class="s2">&quot;employee_id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMP004&quot;</span><span class="p">,</span> <span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;deep learning frameworks&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    <span class="p">{</span><span class="s2">&quot;employee_id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMP004&quot;</span><span class="p">,</span> <span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;natural language processing&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="p">])</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="c1"># Ingest data</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="n">hb</span><span class="o">.</span><span class="n">ingest</span><span class="p">(</span><span class="n">employees</span><span class="p">,</span> <span class="s2">&quot;employees&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="n">hb</span><span class="o">.</span><span class="n">ingest</span><span class="p">(</span><span class="n">expertise</span><span class="p">,</span> <span class="s2">&quot;expertise&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="n">hb</span><span class="o">.</span><span class="n">ingest</span><span class="p">(</span><span class="n">projects</span><span class="p">,</span> <span class="s2">&quot;projects&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="n">hb</span><span class="o">.</span><span class="n">ingest</span><span class="p">(</span><span class="n">budgets</span><span class="p">,</span> <span class="s2">&quot;budgets&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="c1"># === DECLARE INTERSECTIONS ===</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="c1"># Cross-encoding: EXACT employee_id → SEMANTIC topic</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="n">ix</span> <span class="o">=</span> <span class="n">hb</span><span class="o">.</span><span class="n">intersect_flexible</span><span class="p">(</span><span class="s2">&quot;employees.employee_id&quot;</span><span class="p">,</span> <span class="s2">&quot;expertise.topic&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="n">hb</span><span class="o">.</span><span class="n">populate_links</span><span class="p">(</span><span class="n">ix</span><span class="p">,</span> <span class="n">employee_expertise</span><span class="p">,</span> <span class="s2">&quot;employee_id&quot;</span><span class="p">,</span> <span class="s2">&quot;topic&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="c1"># Same-encoding joins</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="n">hb</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="s2">&quot;expertise.topic&quot;</span><span class="p">,</span> <span class="s2">&quot;projects.focus_area&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="n">hb</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="s2">&quot;projects.project_id&quot;</span><span class="p">,</span> <span class="s2">&quot;budgets.project_id&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="c1"># === THE POWER QUERY ===</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="n">results</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>    <span class="n">hb</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;employees&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>    <span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;machine learning&quot;</span><span class="p">)</span>           <span class="c1"># SEMANTIC: fuzzy bio search</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">department</span><span class="o">=</span><span class="s2">&quot;Engineering&quot;</span><span class="p">)</span>     <span class="c1"># EXACT: department filter</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;expertise&quot;</span><span class="p">)</span>                    <span class="c1"># CROSS-ENCODING: via links!</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;projects&quot;</span><span class="p">)</span>                     <span class="c1"># SEMANTIC: topic → focus area</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;budgets&quot;</span><span class="p">)</span>                      <span class="c1"># EXACT: project_id match</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="p">)</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="c1"># That&#39;s it. ~10 lines instead of 200+.</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>    <span class="n">emp</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;employees&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>    <span class="n">exp</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;expertise&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>    <span class="n">proj</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;projects&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>    <span class="n">budget</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;budgets&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>
+<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">emp</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> → </span><span class="si">{</span><span class="n">exp</span><span class="p">[</span><span class="s1">&#39;topic&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> → </span><span class="si">{</span><span class="n">proj</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> ($</span><span class="si">{</span><span class="n">budget</span><span class="p">[</span><span class="s1">&#39;allocated&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Output:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Alice Chen → natural language processing → ChatBot v2 ($500,000)
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Alice Chen → deep learning frameworks → Model Training Platform ($1,000,000)
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>David Lee → natural language processing → ChatBot v2 ($500,000)
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>David Lee → deep learning frameworks → Model Training Platform ($1,000,000)
+</code></pre></div></p>
+<h2 id="what-makes-this-unique">What Makes This Unique<a class="headerlink" href="#what-makes-this-unique" title="Permanent link">&para;</a></h2>
+<h3 id="1-unified-query-language">1. Unified Query Language<a class="headerlink" href="#1-unified-query-language" title="Permanent link">&para;</a></h3>
+<p>One syntax for semantic, exact, and graph operations:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;query&quot;</span><span class="p">)</span>           <span class="c1"># Semantic similarity</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>     <span class="c1"># Exact equality</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;collection&quot;</span><span class="p">)</span>        <span class="c1"># Graph traversal</span>
+</code></pre></div>
+<h3 id="2-cross-encoding-joins">2. Cross-Encoding Joins<a class="headerlink" href="#2-cross-encoding-joins" title="Permanent link">&para;</a></h3>
+<p>Connect fields with different encoding types via explicit links:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># EXACT employee IDs ↔ SEMANTIC topic descriptions</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">ix</span> <span class="o">=</span> <span class="n">hb</span><span class="o">.</span><span class="n">intersect_flexible</span><span class="p">(</span><span class="s2">&quot;employees.employee_id&quot;</span><span class="p">,</span> <span class="s2">&quot;expertise.topic&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">hb</span><span class="o">.</span><span class="n">populate_links</span><span class="p">(</span><span class="n">ix</span><span class="p">,</span> <span class="n">links_df</span><span class="p">,</span> <span class="s2">&quot;employee_id&quot;</span><span class="p">,</span> <span class="s2">&quot;topic&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="3-declarative-not-procedural">3. Declarative, Not Procedural<a class="headerlink" href="#3-declarative-not-procedural" title="Permanent link">&para;</a></h3>
+<p>Describe <strong>what</strong> you want, not <strong>how</strong> to orchestrate it:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># What: ML experts in Engineering with their projects and budgets</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># How: HyperBinder figures it out</span>
+</code></pre></div>
+<h3 id="4-type-safe">4. Type-Safe<a class="headerlink" href="#4-type-safe" title="Permanent link">&para;</a></h3>
+<p>Schema validation catches errors at definition time, not runtime.</p>
+<h3 id="5-composable">5. Composable<a class="headerlink" href="#5-composable" title="Permanent link">&para;</a></h3>
+<p>Each operation builds on the previous, creating a fluent chain.</p>
+<h2 id="additional-capabilities">Additional Capabilities<a class="headerlink" href="#additional-capabilities" title="Permanent link">&para;</a></h2>
+<h3 id="analogical-reasoning">Analogical Reasoning<a class="headerlink" href="#analogical-reasoning" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># &quot;Alice is our NLP expert. Who plays a similar role for computer vision?&quot;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">results</span> <span class="o">=</span> <span class="n">hb</span><span class="o">.</span><span class="n">analogy</span><span class="p">(</span><span class="s2">&quot;Alice Chen&quot;</span><span class="p">,</span> <span class="s2">&quot;NLP&quot;</span><span class="p">,</span> <span class="s2">&quot;computer vision&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>                     <span class="n">field</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">collection</span><span class="o">=</span><span class="s2">&quot;employees&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="bidirectional-traversal">Bidirectional Traversal<a class="headerlink" href="#bidirectional-traversal" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Start from budgets, trace back to employees</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">results</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">hb</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;budgets&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">allocated__gt</span><span class="o">=</span><span class="mi">500000</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;projects&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;expertise&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;employees&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">)</span>
+</code></pre></div>
+<h3 id="prototype-search">Prototype Search<a class="headerlink" href="#prototype-search" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Find employees similar to ANY of these examples</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">results</span> <span class="o">=</span> <span class="n">hb</span><span class="o">.</span><span class="n">search_prototype</span><span class="p">(</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">examples</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Alice Chen&quot;</span><span class="p">,</span> <span class="s2">&quot;David Lee&quot;</span><span class="p">],</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">field</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">collection</span><span class="o">=</span><span class="s2">&quot;employees&quot;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">)</span>
+</code></pre></div>
+<h2 id="running-the-demo">Running the Demo<a class="headerlink" href="#running-the-demo" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python<span class="w"> </span>examples/compose/unified_intelligence_demo.py
+</code></pre></div>
+<h2 id="compound-combinations-model-any-domain">Compound Combinations: Model Any Domain<a class="headerlink" href="#compound-combinations-model-any-domain" title="Permanent link">&para;</a></h2>
+<p>The real power is <strong>combining compounds</strong> to model any domain. Each compound is optimized for a specific pattern, and intersections wire them together.</p>
+<table>
+<thead>
+<tr>
+<th>Compound</th>
+<th>Optimized For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Catalog</strong></td>
+<td>Searchable records with weighted fields</td>
+</tr>
+<tr>
+<td><strong>RelationalTable</strong></td>
+<td>CRUD operations with primary keys</td>
+</tr>
+<tr>
+<td><strong>KnowledgeGraph</strong></td>
+<td>Entity-relation-entity facts</td>
+</tr>
+<tr>
+<td><strong>Hierarchy</strong></td>
+<td>Parent-child trees (org charts, taxonomies)</td>
+</tr>
+<tr>
+<td><strong>Document</strong></td>
+<td>Text chunks with metadata</td>
+</tr>
+<tr>
+<td><strong>Network</strong></td>
+<td>Graph relationships (social, citations)</td>
+</tr>
+<tr>
+<td><strong>TimeSeries</strong></td>
+<td>Time-ordered sequences</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-healthcare-system">Example: Healthcare System<a class="headerlink" href="#example-healthcare-system" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    subgraph row1 [" "]
+        direction LR
+        P["Patients&lt;br/&gt;&lt;i&gt;Catalog&lt;/i&gt;"]
+        D["Diagnoses&lt;br/&gt;&lt;i&gt;KnowledgeGraph&lt;/i&gt;"]
+        T["Treatments&lt;br/&gt;&lt;i&gt;TimeSeries&lt;/i&gt;"]
+    end
+    subgraph row2 [" "]
+        direction LR
+        R["Records&lt;br/&gt;&lt;i&gt;RelationalTable&lt;/i&gt;"]
+        M["Medical Ontology&lt;br/&gt;&lt;i&gt;Hierarchy&lt;/i&gt;"]
+        DR["Drug Database&lt;br/&gt;&lt;i&gt;RelationalTable&lt;/i&gt;"]
+    end
+    P --&gt; D --&gt; T
+    P --&gt; R
+    D --&gt; M
+    T --&gt; DR</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">results</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">hb</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;patients&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;diabetes symptoms&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;diagnoses&quot;</span><span class="p">)</span>        <span class="c1"># Semantic: symptoms → condition</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;treatments&quot;</span><span class="p">)</span>       <span class="c1"># Identity: condition → treatment plan</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;drugs&quot;</span><span class="p">)</span>            <span class="c1"># Identity: drug_id → drug record</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">has_contraindications</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">)</span>
+</code></pre></div>
+<h3 id="example-legal-research-platform">Example: Legal Research Platform<a class="headerlink" href="#example-legal-research-platform" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    subgraph row1 [" "]
+        direction LR
+        C["Cases&lt;br/&gt;&lt;i&gt;Document&lt;/i&gt;"]
+        CT["Citations&lt;br/&gt;&lt;i&gt;Network&lt;/i&gt;"]
+        S["Statutes&lt;br/&gt;&lt;i&gt;Hierarchy&lt;/i&gt;"]
+    end
+    subgraph row2 [" "]
+        direction LR
+        J["Judges&lt;br/&gt;&lt;i&gt;Catalog&lt;/i&gt;"]
+        L["Legal Concepts&lt;br/&gt;&lt;i&gt;KnowledgeGraph&lt;/i&gt;"]
+        JR["Jurisdictions&lt;br/&gt;&lt;i&gt;Hierarchy&lt;/i&gt;"]
+    end
+    C --&gt; CT --&gt; S
+    C --&gt; J
+    CT --&gt; L
+    S --&gt; JR</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">results</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="n">hb</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;cases&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;digital privacy&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;citations&quot;</span><span class="p">)</span>        <span class="c1"># Network: case → cited cases</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;statutes&quot;</span><span class="p">)</span>         <span class="c1"># Identity: statute_id → statute</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">amendment</span><span class="o">=</span><span class="s2">&quot;4th&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;concepts&quot;</span><span class="p">)</span>         <span class="c1"># Semantic: case text → legal concept</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">)</span>
+</code></pre></div>
+<h3 id="example-research-knowledge-base">Example: Research Knowledge Base<a class="headerlink" href="#example-research-knowledge-base" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    subgraph row1 [" "]
+        direction LR
+        PA["Papers&lt;br/&gt;&lt;i&gt;Document&lt;/i&gt;"]
+        AU["Authors&lt;br/&gt;&lt;i&gt;Network&lt;/i&gt;"]
+        IN["Institutions&lt;br/&gt;&lt;i&gt;Hierarchy&lt;/i&gt;"]
+    end
+    subgraph row2 [" "]
+        direction LR
+        CO["Concepts&lt;br/&gt;&lt;i&gt;KnowledgeGraph&lt;/i&gt;"]
+        GR["Grants&lt;br/&gt;&lt;i&gt;RelationalTable&lt;/i&gt;"]
+        VE["Venues&lt;br/&gt;&lt;i&gt;Catalog&lt;/i&gt;"]
+    end
+    PA --&gt; AU --&gt; IN
+    PA --&gt; CO
+    AU --&gt; GR
+    IN --&gt; VE</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">results</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="n">hb</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;papers&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;transformer attention mechanism&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;concepts&quot;</span><span class="p">)</span>         <span class="c1"># Semantic: abstract → research concept</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;authors&quot;</span><span class="p">)</span>          <span class="c1"># Network: paper → author collaborations</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;institutions&quot;</span><span class="p">)</span>     <span class="c1"># Identity: affiliation_id → institution</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Stanford&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;grants&quot;</span><span class="p">)</span>           <span class="c1"># Flexible: author_id → grant_id</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">agency</span><span class="o">=</span><span class="s2">&quot;NSF&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="p">)</span>
+</code></pre></div>
+<h3 id="the-pattern">The Pattern<a class="headerlink" href="#the-pattern" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Choose compounds</strong> that match your data shapes</li>
+<li><strong>Connect with intersections</strong> (strict for same-type, flexible for cross-type)</li>
+<li><strong>Query declaratively</strong> across the entire graph</li>
+</ol>
+<p>Each compound handles its specialty. Mix them freely—the intersections handle the glue.</p>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>One System</strong>: Replace Elasticsearch + PostgreSQL + Neo4j with one unified interface</li>
+<li><strong>Cross-Encoding</strong>: Connect any field types via explicit link mappings</li>
+<li><strong>Declarative</strong>: Focus on the question, not the plumbing</li>
+<li><strong>Composable</strong>: Build complex queries from simple, chainable operations</li>
+<li><strong>Type-Safe</strong>: Catch errors early with schema validation</li>
+<li><strong>Domain Flexible</strong>: Combine compounds to model any knowledge architecture</li>
+</ol>
+<p>This is the power of neurosymbolic computing: the best of semantic and symbolic approaches, seamlessly integrated.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>

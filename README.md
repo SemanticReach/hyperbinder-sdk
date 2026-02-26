@@ -1,2 +1,0 @@
-# hyperbinder-sdk
-Hyperbinder SDK 
