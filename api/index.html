@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../concepts/intersections/">
+        <link rel="prev" href="../concepts/semantic-cache/">
       
       
         <link rel="next" href="client/">
@@ -283,6 +283,8 @@
       
         
       
+        
+      
     
     
       
@@ -412,6 +414,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/semantic-cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Cache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -432,6 +455,8 @@
       
         
           
+        
+      
         
       
         
@@ -776,6 +801,27 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Cache
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1812,6 +1858,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#semantic-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Cache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#results-errors" class="md-nav__link">
     <span class="md-ellipsis">
       Results &amp; Errors
@@ -1877,6 +1932,10 @@
 <td>Schema system (Molecules, Compounds, Fields)</td>
 </tr>
 <tr>
+<td><strong>Semantic Cache</strong></td>
+<td>LLM response caching with semantic matching</td>
+</tr>
+<tr>
 <td><strong>Models</strong></td>
 <td>Result types (<code>SearchResult</code>, <code>Context</code>, etc.)</td>
 </tr>
@@ -1900,6 +1959,10 @@
 <li><a href="compose/fields/">Fields &amp; Encoding</a> - Field configuration</li>
 <li><a href="compose/query/">Query Builder</a> - ComposeQuery methods</li>
 </ul>
+<h3 id="semantic-cache">Semantic Cache<a class="headerlink" href="#semantic-cache" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="cache/">SemanticCache</a> - LLM response caching with context isolation</li>
+</ul>
 <h3 id="results-errors">Results &amp; Errors<a class="headerlink" href="#results-errors" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="models/">Models</a> - SearchResult, Context, Answer, etc.</li>
@@ -1916,8 +1979,11 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">Triple</span><span class="p">,</span> <span class="n">Field</span><span class="p">,</span> <span class="n">Encoding</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">KnowledgeGraph</span><span class="p">,</span> <span class="n">Catalog</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># Exceptions</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi</span><span class="w"> </span><span class="kn">import</span> <span class="n">HyperBinderError</span><span class="p">,</span> <span class="n">CollectionNotFoundError</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># Semantic Cache</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hyperbinder</span><span class="w"> </span><span class="kn">import</span> <span class="n">SemanticCache</span><span class="p">,</span> <span class="n">CacheHit</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># Exceptions</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi</span><span class="w"> </span><span class="kn">import</span> <span class="n">HyperBinderError</span><span class="p">,</span> <span class="n">CollectionNotFoundError</span>
 </code></pre></div>
 
 

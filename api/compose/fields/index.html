@@ -283,6 +283,8 @@
       
         
       
+        
+      
     
     
       
@@ -412,6 +414,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/semantic-cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Cache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -432,6 +455,8 @@
       
         
           
+        
+      
         
       
         
@@ -869,6 +894,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#hybi.compose.Field.mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      threshold
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#hybi.compose.Field.__init__" class="md-nav__link">
     <span class="md-ellipsis">
       __init__
@@ -1138,6 +1181,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#filter-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filter Mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#encoding-selection-guide" class="md-nav__link">
     <span class="md-ellipsis">
       Encoding Selection Guide
@@ -1380,6 +1432,27 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Cache
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2506,6 +2579,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#hybi.compose.Field.mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.compose.Field.threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      threshold
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#hybi.compose.Field.__init__" class="md-nav__link">
     <span class="md-ellipsis">
       __init__
@@ -2775,6 +2866,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#filter-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filter Mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#encoding-selection-guide" class="md-nav__link">
     <span class="md-ellipsis">
       Encoding Selection Guide
@@ -2972,7 +3072,9 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">weight</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>                   <span class="c1"># Importance in similarity (default 1.0)</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">similar_within</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>           <span class="c1"># Scale for NUMERIC encoding</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">searchable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>              <span class="c1"># Include in search (default True)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;rank&quot;</span><span class="p">,</span>                  <span class="c1"># &#39;filter&#39; or &#39;rank&#39; (default &#39;rank&#39;)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">threshold</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>                <span class="c1"># Minimum similarity for filter mode (0-1)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">)</span>
 </code></pre></div>
 
 
@@ -3208,6 +3310,65 @@ Default: 0.1 (suitable for normalized 0-1 data).</p>
 
 </div>
 
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Field.mode" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">mode</span> <span class="o">=</span> <span class="n">MODE_RANK</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Field.mode" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Query mode: 'filter' or 'rank'.</p>
+<p>'filter': candidates with similarity &lt; threshold on this field are eliminated.
+Multiple filter fields are conjunctive (AND). Filter fields do NOT contribute
+to the final ranking score.</p>
+<p>'rank': candidates are scored by weighted similarity on this field.
+The final score is weighted average of rank-field similarities among
+candidates that survived all filters.</p>
+<p>Default: 'rank' (existing behavior).</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.compose.Field.threshold" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">threshold</span> <span class="o">=</span> <span class="n">DEFAULT_THRESHOLD</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.compose.Field.threshold" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Minimum similarity for filter mode.</p>
+<p>Only used when mode='filter'. Candidates with similarity below this
+threshold on this field are eliminated before ranking.</p>
+<p>For exact encoding, 0.5 is a good threshold (exact matches score ~1.0,
+mismatches score ~0.0). For semantic encoding, use lower thresholds
+(0.3-0.5) to allow fuzzy matching.</p>
+<p>Default: 0.0 (no filtering in rank mode).</p>
+
+    </div>
+
+</div>
+
 
 
 
@@ -3215,7 +3376,7 @@ Default: 0.1 (suitable for normalized 0-1 data).</p>
 
 
 <h3 id="hybi.compose.Field.__init__" class="doc doc-heading">
-            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">SEMANTIC</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">similar_within</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">searchable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">SEMANTIC</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">similar_within</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">MODE_RANK</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="n">DEFAULT_THRESHOLD</span><span class="p">,</span> <span class="n">searchable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">phase_dim</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#hybi.compose.Field.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -3955,6 +4116,58 @@ Values at 150 apart (3x) have ~1% similarity.</p>
 </code></pre></div>
 <p>When searching, higher-weighted fields contribute more to the similarity score.</p>
 <hr />
+<h2 id="filter-mode">Filter Mode<a class="headerlink" href="#filter-mode" title="Permanent link">&para;</a></h2>
+<p>By default, all fields use <code>mode="rank"</code> — their similarity contributes to the final weighted score. Setting <code>mode="filter"</code> changes a field to act as a hard gate: candidates below the <code>threshold</code> are eliminated before ranking.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">Bundle</span><span class="p">,</span> <span class="n">Field</span><span class="p">,</span> <span class="n">Encoding</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">schema</span> <span class="o">=</span> <span class="n">Bundle</span><span class="p">(</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">fields</span><span class="o">=</span><span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="c1"># Filter: only exact-match categories survive</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="n">Field</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">EXACT</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;filter&quot;</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="c1"># Rank: survivors scored by description similarity</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">Field</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="n">Encoding</span><span class="o">.</span><span class="n">SEMANTIC</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mf">1.0</span><span class="p">),</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="p">}</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">)</span>
+</code></pre></div>
+<p>Filter fields do <strong>not</strong> contribute to the ranking score — they only gate candidates. Multiple filter fields are conjunctive (AND): a candidate must pass all filters to be ranked.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mode</code></td>
+<td><code>str</code></td>
+<td><code>"rank"</code></td>
+<td><code>"filter"</code> eliminates candidates below threshold; <code>"rank"</code> contributes to score</td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td><code>float</code></td>
+<td><code>0.0</code></td>
+<td>Minimum similarity for filter mode (0.0 to 1.0)</td>
+</tr>
+</tbody>
+</table>
+<p>Filter mode can be set at schema level (applies to all queries) or overridden per query in <code>search_slots()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Schema-level default: category always filters</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">results</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">search_slots</span><span class="p">({</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;physics&quot;</span><span class="p">,</span>                <span class="c1"># Uses schema mode=&quot;filter&quot;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;quantum entanglement&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">})</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># Query-level override: rank on category instead</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">results</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">search_slots</span><span class="p">({</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;physics&quot;</span><span class="p">,</span> <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;rank&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">},</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;quantum entanglement&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">})</span>
+</code></pre></div>
+<hr />
 <h2 id="encoding-selection-guide">Encoding Selection Guide<a class="headerlink" href="#encoding-selection-guide" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>flowchart LR
     Q1{Categorical/ID?} --&gt;|Yes| EXACT
@@ -4011,15 +4224,15 @@ Values at 150 apart (3x) have ~1% similarity.</p>
 <hr />
 <h2 id="fieldpath">FieldPath<a class="headerlink" href="#fieldpath" title="Permanent link">&para;</a></h2>
 <p>The <code>FieldPath</code> dataclass represents a path to a field within a nested schema. It's returned by <code>schema.resolve_field()</code> and used internally for field resolution.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose.fields</span><span class="w"> </span><span class="kn">import</span> <span class="n">FieldPath</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># FieldPath for a nested field</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">path</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">resolve_field</span><span class="p">(</span><span class="s2">&quot;subject_type&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">parts</span><span class="p">)</span>          <span class="c1"># (&quot;subject&quot;, &quot;left&quot;)</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">column_name</span><span class="p">)</span>    <span class="c1"># &quot;subject_type&quot;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">dot_notation</span><span class="p">)</span>   <span class="c1"># &quot;subject.left&quot;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">root_slot</span><span class="p">)</span>      <span class="c1"># &quot;subject&quot;</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">is_nested</span><span class="p">)</span>      <span class="c1"># True</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose.fields</span><span class="w"> </span><span class="kn">import</span> <span class="n">FieldPath</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># FieldPath for a nested field</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">path</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">resolve_field</span><span class="p">(</span><span class="s2">&quot;subject_type&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">parts</span><span class="p">)</span>          <span class="c1"># (&quot;subject&quot;, &quot;left&quot;)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">column_name</span><span class="p">)</span>    <span class="c1"># &quot;subject_type&quot;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">dot_notation</span><span class="p">)</span>   <span class="c1"># &quot;subject.left&quot;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">root_slot</span><span class="p">)</span>      <span class="c1"># &quot;subject&quot;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">is_nested</span><span class="p">)</span>      <span class="c1"># True</span>
 </code></pre></div>
 <h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
 <table>
@@ -4338,18 +4551,18 @@ FieldPath(parts=("subject", "left"), column_name="subject_type", field=Field(...
 <h2 id="schemaevolution">SchemaEvolution<a class="headerlink" href="#schemaevolution" title="Permanent link">&para;</a></h2>
 <p>The <code>SchemaEvolution</code> enum controls how schema changes are handled during subsequent ingest operations on a collection.</p>
 <p>When using <code>ADAPTIVE</code> mode, you can optionally suppress evolution warnings for bulk/backfill jobs.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">SchemaEvolution</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">hb</span><span class="o">.</span><span class="n">ingest</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">collection</span><span class="o">=</span><span class="s2">&quot;users&quot;</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="n">evolution</span><span class="o">=</span><span class="n">SchemaEvolution</span><span class="o">.</span><span class="n">STRICT</span><span class="p">)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># ADAPTIVE mode with warnings suppressed</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">hb</span><span class="o">.</span><span class="n">ingest</span><span class="p">(</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">df</span><span class="p">,</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">collection</span><span class="o">=</span><span class="s2">&quot;users&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="n">evolution</span><span class="o">=</span><span class="n">SchemaEvolution</span><span class="o">.</span><span class="n">ADAPTIVE</span><span class="p">,</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="n">warn_schema_evolution</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">SchemaEvolution</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">hb</span><span class="o">.</span><span class="n">ingest</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">collection</span><span class="o">=</span><span class="s2">&quot;users&quot;</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="n">evolution</span><span class="o">=</span><span class="n">SchemaEvolution</span><span class="o">.</span><span class="n">STRICT</span><span class="p">)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1"># ADAPTIVE mode with warnings suppressed</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">hb</span><span class="o">.</span><span class="n">ingest</span><span class="p">(</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">df</span><span class="p">,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="n">collection</span><span class="o">=</span><span class="s2">&quot;users&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="n">evolution</span><span class="o">=</span><span class="n">SchemaEvolution</span><span class="o">.</span><span class="n">ADAPTIVE</span><span class="p">,</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="n">warn_schema_evolution</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="p">)</span>
 </code></pre></div>
 <table>
 <thead>

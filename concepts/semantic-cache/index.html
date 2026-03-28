@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../extract/">
+        <link rel="prev" href="../intersections/">
       
       
-        <link rel="next" href="../combined/">
+        <link rel="next" href="../../api/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
     
     
       
-        <title>Unbind - HyperBinder SDK</title>
+        <title>Semantic Cache - HyperBinder SDK</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#post-unbinddb_namenamespace" class="md-skip">
+        <a href="#semantic-cache" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="HyperBinder SDK" class="md-header__button md-logo" aria-label="HyperBinder SDK" data-md-component="logo">
+    <a href="../.." title="HyperBinder SDK" class="md-header__button md-logo" aria-label="HyperBinder SDK" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Unbind
+              Semantic Cache
             
           </span>
         </div>
@@ -199,7 +199,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="HyperBinder SDK" class="md-nav__button md-logo" aria-label="HyperBinder SDK" data-md-component="logo">
+    <a href="../.." title="HyperBinder SDK" class="md-nav__button md-logo" aria-label="HyperBinder SDK" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -229,7 +229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -249,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/" class="md-nav__link">
+      <a href="../../getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -266,6 +266,8 @@
       
   
   
+    
+  
   
   
     
@@ -293,18 +295,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../concepts/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -321,7 +321,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Concepts
@@ -337,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../concepts/compose/" class="md-nav__link">
+      <a href="../compose/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -358,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../concepts/molecules-vs-compounds/" class="md-nav__link">
+      <a href="../molecules-vs-compounds/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -379,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../concepts/embeddings/" class="md-nav__link">
+      <a href="../embeddings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -400,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../concepts/intersections/" class="md-nav__link">
+      <a href="../intersections/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,10 +418,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../concepts/semantic-cache/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Semantic Cache
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -430,6 +450,116 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-semantic-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Semantic Caching?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuning-the-threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuning the Threshold
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-to-live-ttl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time-To-Live (TTL)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-with-should_cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering with should_cache
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-seeding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch Seeding
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cache-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -484,7 +614,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../api/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -562,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/" class="md-nav__link">
+      <a href="../../api/client/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -583,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../collection/" class="md-nav__link">
+      <a href="../../api/collection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +776,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../compose/" class="md-nav__link ">
+            <a href="../../api/compose/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -679,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compose/molecules/" class="md-nav__link">
+      <a href="../../api/compose/molecules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -700,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compose/compounds/" class="md-nav__link">
+      <a href="../../api/compose/compounds/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -721,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compose/fields/" class="md-nav__link">
+      <a href="../../api/compose/fields/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -742,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compose/query/" class="md-nav__link">
+      <a href="../../api/compose/query/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -763,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compose/validation/" class="md-nav__link">
+      <a href="../../api/compose/validation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -784,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compose/intersections/" class="md-nav__link">
+      <a href="../../api/compose/intersections/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -813,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cache/" class="md-nav__link">
+      <a href="../../api/cache/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -834,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../models/" class="md-nav__link">
+      <a href="../../api/models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -855,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exceptions/" class="md-nav__link">
+      <a href="../../api/exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,10 +1010,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -903,11 +1031,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -921,7 +1051,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             REST API
@@ -980,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build_ingest_data/" class="md-nav__link">
+      <a href="../../api/api-client/build_ingest_data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upload_document/" class="md-nav__link">
+      <a href="../../api/api-client/upload_document/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1027,10 +1157,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1063,11 +1191,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -1081,7 +1211,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Query
@@ -1095,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../query_rag_symbolic/" class="md-nav__link">
+      <a href="../../api/api-client/query_rag_symbolic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1116,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multihop/" class="md-nav__link">
+      <a href="../../api/api-client/multihop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1137,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multihop_unstructured/" class="md-nav__link">
+      <a href="../../api/api-client/multihop_unstructured/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1158,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../analogy/" class="md-nav__link">
+      <a href="../../api/api-client/analogy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1179,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bundle_search/" class="md-nav__link">
+      <a href="../../api/api-client/bundle_search/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1200,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../batch_match/" class="md-nav__link">
+      <a href="../../api/api-client/batch_match/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1221,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../search_slot/" class="md-nav__link">
+      <a href="../../api/api-client/search_slot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1242,7 +1372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../search_slots/" class="md-nav__link">
+      <a href="../../api/api-client/search_slots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1263,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../traverse_fuzzy/" class="md-nav__link">
+      <a href="../../api/api-client/traverse_fuzzy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1284,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extract/" class="md-nav__link">
+      <a href="../../api/api-client/extract/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1302,30 +1432,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Unbind
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../api/api-client/unbind/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1334,95 +1444,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#request" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      Behavior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#responses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Responses
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Responses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#200-ok" class="md-nav__link">
-    <span class="md-ellipsis">
-      200 OK
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-responses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1435,7 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../combined/" class="md-nav__link">
+      <a href="../../api/api-client/combined/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1511,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../select/" class="md-nav__link">
+      <a href="../../api/api-client/select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1532,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../join/" class="md-nav__link">
+      <a href="../../api/api-client/join/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1553,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../row_crud/" class="md-nav__link">
+      <a href="../../api/api-client/row_crud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1629,7 +1650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links_ingest/" class="md-nav__link">
+      <a href="../../api/api-client/links_ingest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1650,7 +1671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links_match/" class="md-nav__link">
+      <a href="../../api/api-client/links_match/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1671,7 +1692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links_list/" class="md-nav__link">
+      <a href="../../api/api-client/links_list/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1744,7 +1765,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../examples/" class="md-nav__link ">
+            <a href="../../examples/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1777,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/unified-intelligence/" class="md-nav__link">
+      <a href="../../examples/unified-intelligence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1798,7 +1819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/fictional-universes/" class="md-nav__link">
+      <a href="../../examples/fictional-universes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1819,7 +1840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/ecommerce/" class="md-nav__link">
+      <a href="../../examples/ecommerce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1840,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/enterprise-knowledge/" class="md-nav__link">
+      <a href="../../examples/enterprise-knowledge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1861,7 +1882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/fuzzy-to-exact/" class="md-nav__link">
+      <a href="../../examples/fuzzy-to-exact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1882,7 +1903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../examples/intersections-tutorial/" class="md-nav__link">
+      <a href="../../examples/intersections-tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1930,69 +1951,90 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#request" class="md-nav__link">
+  <a href="#why-semantic-caching" class="md-nav__link">
     <span class="md-ellipsis">
-      Request
+      Why Semantic Caching?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#behavior" class="md-nav__link">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Behavior
+      How It Works
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#responses" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
-      Responses
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Responses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#200-ok" class="md-nav__link">
-    <span class="md-ellipsis">
-      200 OK
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-responses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
+      Quick Start
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#tuning-the-threshold" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Tuning the Threshold
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-to-live-ttl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time-To-Live (TTL)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-with-should_cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering with should_cache
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-seeding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch Seeding
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cache-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
     </span>
   </a>
   
@@ -2016,199 +2058,211 @@
   
 
 
-<h1 id="post-unbinddb_namenamespace"><code>POST /unbind/{db_name}/{namespace}</code><a class="headerlink" href="#post-unbinddb_namenamespace" title="Permanent link">&para;</a></h1>
-<p>Extracts slot values from compositionally-encoded rows using HDC (HyperDimensional Computing) algebra. Unlike <code>/extract</code>, this performs actual inverse binding operations and returns similarity scores indicating extraction confidence.</p>
-<hr />
-<h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">&para;</a></h2>
-<p><strong>Content-Type:</strong> <code>application/json</code></p>
-<p><strong>URL Parameters:</strong></p>
+<h1 id="semantic-cache">Semantic Cache<a class="headerlink" href="#semantic-cache" title="Permanent link">&para;</a></h1>
+<p>Cache LLM responses so that semantically equivalent queries return cached answers instantly, while strict context isolation prevents cross-domain leakage.</p>
+<h2 id="why-semantic-caching">Why Semantic Caching?<a class="headerlink" href="#why-semantic-caching" title="Permanent link">&para;</a></h2>
+<p>Exact-match caches miss when users rephrase a question. A user asking <em>"How do I return something?"</em> won't hit a cache entry stored under <em>"What is your return policy?"</em> — even though the intent is identical.</p>
+<p>HyperBinder's Semantic Cache solves this by encoding queries into hyperdimensional vectors and matching on <strong>similarity</strong>, not string equality.</p>
+<pre class="mermaid"><code>flowchart LR
+    Q["'How do I return something?'"] --&gt;|semantic match| E["'What is your return policy?'"]
+    E --&gt; R["30-day returns..."]</code></pre>
+<h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<p>Under the hood, <code>SemanticCache</code> uses a <strong>Triple</strong> schema:</p>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>db_name</code></td>
-<td>Name of the database</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>Namespace within the database</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Body:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>row_ids</code></td>
-<td>list of int</td>
-<td>✅</td>
-<td>—</td>
-<td>Row IDs to unbind</td>
-</tr>
-<tr>
-<td><code>slots</code></td>
-<td>list of string</td>
-<td>✅</td>
-<td>—</td>
-<td>Slot names to extract (e.g. <code>["subject", "object"]</code>)</td>
-</tr>
-<tr>
-<td><code>include_scores</code></td>
-<td>bool</td>
-<td>❌</td>
-<td><code>true</code></td>
-<td>Whether to include per-slot similarity scores in the response</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="behavior">Behavior<a class="headerlink" href="#behavior" title="Permanent link">&para;</a></h2>
-<p><strong>HDC unbinding</strong> — Each row's hypervector is decoded using the inverse binding operation for the requested slots. The similarity score for each slot indicates how confidently that value was extracted (1.0 = perfect, 0.0 = no signal).</p>
-<p><strong>Semantic slots</strong> — If any requested slot uses <code>"semantic"</code> encoding, embeddings for all stored values in that namespace are loaded into the cache before unbinding, then cleared afterwards.</p>
-<p><strong>Schema required</strong> — The collection must have been ingested with a Compose schema stored in metadata. If not, use <code>/extract</code> instead.</p>
-<p><strong>Slot validation</strong> — Requesting an unknown slot (not present in the schema) returns a <code>400</code> error listing available slots.</p>
-<hr />
-<h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
-<h3 id="200-ok">200 OK<a class="headerlink" href="#200-ok" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">&quot;predicate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;works_at&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">&quot;object&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Acme Corp&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="nt">&quot;_scores&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.97</span><span class="p">,</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="nt">&quot;predicate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.88</span><span class="p">,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="nt">&quot;object&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.91</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="nt">&quot;predicate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;reports_to&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">      </span><span class="nt">&quot;object&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">      </span><span class="nt">&quot;_scores&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.95</span><span class="p">,</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="nt">&quot;predicate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.84</span><span class="p">,</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="nt">&quot;object&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.89</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="p">}</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
+<th>Slot</th>
 <th>Field</th>
-<th>Description</th>
+<th>Encoding</th>
+<th>Role</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>count</code></td>
-<td>Number of rows processed</td>
+<td>subject</td>
+<td><code>query</code></td>
+<td><code>SEMANTIC</code></td>
+<td>Matched by similarity</td>
 </tr>
 <tr>
-<td><code>results</code></td>
-<td>Array of row objects with extracted slot values</td>
+<td>predicate</td>
+<td><code>context</code></td>
+<td><code>EXACT</code></td>
+<td>Matched exactly — isolates domains</td>
 </tr>
 <tr>
-<td><code>_scores</code></td>
-<td>Per-slot similarity scores (omitted if <code>include_scores</code> is false)</td>
+<td>object</td>
+<td><code>response</code></td>
+<td><code>SEMANTIC</code> (low weight)</td>
+<td>Stored but not searched on</td>
 </tr>
 </tbody>
 </table>
-<h3 id="error-responses">Error Responses<a class="headerlink" href="#error-responses" title="Permanent link">&para;</a></h3>
+<p>The <code>EXACT</code> encoding on <code>context</code> means that a query stored under <code>"order"</code> will <strong>never</strong> match a lookup under <code>"billing"</code>, regardless of similarity threshold. This is enforced algebraically by the HDC encoding, not by post-hoc filtering.</p>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hyperbinder</span><span class="w"> </span><span class="kn">import</span> <span class="n">HyperBinder</span><span class="p">,</span> <span class="n">SemanticCache</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">hb</span> <span class="o">=</span> <span class="n">HyperBinder</span><span class="p">(</span><span class="n">local</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">encode_fn</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">encode</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">cache</span> <span class="o">=</span> <span class="n">SemanticCache</span><span class="p">(</span><span class="n">hb</span><span class="p">,</span> <span class="n">collection</span><span class="o">=</span><span class="s2">&quot;llm_cache&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Store</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">cache</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;What is your return policy?&quot;</span><span class="p">,</span> <span class="s2">&quot;order&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>          <span class="s2">&quot;Items can be returned within 30 days.&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Retrieve (semantic match)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">hit</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;How do I return something?&quot;</span><span class="p">,</span> <span class="s2">&quot;order&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">hit</span><span class="o">.</span><span class="n">response</span><span class="p">)</span>  <span class="c1"># &quot;Items can be returned within 30 days.&quot;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">hit</span><span class="o">.</span><span class="n">score</span><span class="p">)</span>     <span class="c1"># e.g., 0.82</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># Wrong context -&gt; guaranteed miss</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="k">assert</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;How do I return something?&quot;</span><span class="p">,</span> <span class="s2">&quot;billing&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span>
+</code></pre></div>
+<h2 id="tuning-the-threshold">Tuning the Threshold<a class="headerlink" href="#tuning-the-threshold" title="Permanent link">&para;</a></h2>
+<p>The <code>threshold</code> parameter controls the precision/recall trade-off:</p>
 <table>
 <thead>
 <tr>
-<th>Status</th>
-<th>Condition</th>
+<th>Threshold</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>Best For</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>400</code></td>
-<td>Unknown slot name, or collection was not ingested with a Compose schema</td>
+<td>0.50</td>
+<td>~85%</td>
+<td>~90%</td>
+<td>High recall, tolerant of looser matches</td>
 </tr>
 <tr>
-<td><code>404</code></td>
-<td>Collection or metadata not found</td>
+<td><strong>0.65</strong> (default)</td>
+<td>~93%</td>
+<td>~83%</td>
+<td>Balanced — good starting point</td>
 </tr>
 <tr>
-<td><code>500</code></td>
-<td>Unexpected internal error</td>
+<td>0.75+</td>
+<td>~98%</td>
+<td>~65%</td>
+<td>Strict isolation, minimal false positives</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Start with the default</p>
+<p>The default of <code>0.65</code> was tuned on a 24-cluster benchmark with 96 query variations across 6 domains. Adjust up for stricter matching, down for higher recall.</p>
+</div>
+<p>You can override per-call:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Strict match for this specific lookup</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">hit</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;sensitive query&quot;</span><span class="p">,</span> <span class="s2">&quot;finance&quot;</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.80</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="time-to-live-ttl">Time-To-Live (TTL)<a class="headerlink" href="#time-to-live-ttl" title="Permanent link">&para;</a></h2>
+<p>Entries can expire automatically:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">timedelta</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Default TTL for all entries</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">cache</span> <span class="o">=</span> <span class="n">SemanticCache</span><span class="p">(</span><span class="n">hb</span><span class="p">,</span> <span class="n">default_ttl</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># Per-entry override</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">cache</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;Pricing info?&quot;</span><span class="p">,</span> <span class="s2">&quot;billing&quot;</span><span class="p">,</span> <span class="s2">&quot;$9.99/mo&quot;</span><span class="p">,</span> <span class="n">ttl</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># No TTL (never expires) — the default if default_ttl is None</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">cache</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;FAQ answer&quot;</span><span class="p">,</span> <span class="s2">&quot;general&quot;</span><span class="p">,</span> <span class="s2">&quot;See our help center.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Expired entries are skipped during <code>get()</code> — they are treated as cache misses.</p>
+<h2 id="filtering-with-should_cache">Filtering with <code>should_cache</code><a class="headerlink" href="#filtering-with-should_cache" title="Permanent link">&para;</a></h2>
+<p>Not all responses should be cached. Use the <code>should_cache</code> callback to skip personalized, transactional, or sensitive responses:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">cache</span> <span class="o">=</span> <span class="n">SemanticCache</span><span class="p">(</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">hb</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">should_cache</span><span class="o">=</span><span class="k">lambda</span> <span class="n">query</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="p">(</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="s2">&quot;personal&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">response</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">20</span>  <span class="c1"># skip trivial responses</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="p">),</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1"># This will be silently skipped</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">cache</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s2">&quot;My info?&quot;</span><span class="p">,</span> <span class="s2">&quot;account&quot;</span><span class="p">,</span> <span class="s2">&quot;Your personal balance is $142.50&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="batch-seeding">Batch Seeding<a class="headerlink" href="#batch-seeding" title="Permanent link">&para;</a></h2>
+<p>Pre-populate the cache from a DataFrame of known Q&amp;A pairs:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">faq_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">{</span><span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;Return policy?&quot;</span><span class="p">,</span> <span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="s2">&quot;order&quot;</span><span class="p">,</span> <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;30-day returns.&quot;</span><span class="p">},</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">{</span><span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;Cancel subscription?&quot;</span><span class="p">,</span> <span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="s2">&quot;sub&quot;</span><span class="p">,</span> <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;Go to Settings.&quot;</span><span class="p">},</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="p">{</span><span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;Payment methods?&quot;</span><span class="p">,</span> <span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="s2">&quot;billing&quot;</span><span class="p">,</span> <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;Visa, MC, PayPal.&quot;</span><span class="p">},</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">])</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">cache</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">faq_df</span><span class="p">)</span>
+</code></pre></div>
+<p>The DataFrame must contain columns: <code>query</code>, <code>context</code>, <code>response</code>. An optional <code>expires_at</code> column (epoch float) is respected if present.</p>
+<h2 id="cache-management">Cache Management<a class="headerlink" href="#cache-management" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Statistics</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">stats</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">stats</span><span class="p">()</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># {&quot;count&quot;: 150, &quot;contexts&quot;: [&quot;billing&quot;, &quot;order&quot;, &quot;support&quot;], &quot;collection&quot;: &quot;llm_cache&quot;}</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># Invalidate a specific context (e.g., after content update)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">cache</span><span class="o">.</span><span class="n">invalidate</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="s2">&quot;billing&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># Clear everything</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">cache</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Invalidation cost</p>
+<p><code>invalidate(context=...)</code> performs a full scan, filter, and re-ingest of non-matching entries. This is fine for small-to-medium caches but may be slow at very large scale (100K+ entries). For bulk invalidation, prefer <code>clear()</code> and re-seed.</p>
+</div>
+<h2 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h2>
+<p>The cache includes two built-in optimizations:</p>
+<ol>
+<li>
+<p><strong>Embedding LRU cache</strong> — Repeated <code>get()</code> calls for the same query text skip the <code>encode_fn</code> entirely. Controlled by <code>embedding_cache_size</code> (default: 1024 entries).</p>
+</li>
+<li>
+<p><strong>Query builder caching</strong> — The internal <code>ComposeQuery</code> object is reused across calls, avoiding repeated schema validation.</p>
+</li>
+</ol>
+<p>Typical latencies (mock embeddings, local mode):</p>
+<table>
+<thead>
+<tr>
+<th>Cache Size</th>
+<th>Put (p50)</th>
+<th>Get-Hit (p50)</th>
+<th>Get-Miss (p50)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1,000</td>
+<td>~2ms</td>
+<td>~3ms</td>
+<td>~2ms</td>
+</tr>
+<tr>
+<td>10,000</td>
+<td>~3ms</td>
+<td>~5ms</td>
+<td>~3ms</td>
+</tr>
+<tr>
+<td>100,000</td>
+<td>~5ms</td>
+<td>~8ms</td>
+<td>~5ms</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Real embedding latency</p>
+<p>With a real embedding model (e.g., <code>all-MiniLM-L6-v2</code>), <code>encode_fn</code> typically adds 5-15ms per call. The embedding cache eliminates this for repeated queries.</p>
+</div>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Requires the collection to have been ingested with a Compose schema (e.g. Triple, or a custom slot schema).</li>
-<li>For simple field value retrieval without HDC algebra, use <code>/extract</code> instead.</li>
-<li>Lower similarity scores (below ~0.5) suggest the slot value may be ambiguous or was not strongly encoded.</li>
+<li><a href="../../api/cache/">API Reference: SemanticCache</a> — Full method documentation</li>
+<li><a href="../compose/">Compose System</a> — How the underlying Triple schema works</li>
+<li><a href="../embeddings/">Embeddings</a> — Choosing and configuring an embedding model</li>
 </ul>
-<hr />
-<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">SERVER_URL</span> <span class="o">=</span> <span class="s2">&quot;http://18.220.128.24:8000&quot;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">API_KEY</span>    <span class="o">=</span> <span class="s2">&quot;yourapitoken&quot;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">unbind_slots</span><span class="p">(</span><span class="n">db_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">namespace</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">row_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">slots</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">SERVER_URL</span><span class="si">}</span><span class="s2">/unbind/</span><span class="si">{</span><span class="n">db_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">namespace</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;X-API-Key&quot;</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">},</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="n">json</span><span class="o">=</span><span class="p">{</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            <span class="s2">&quot;row_ids&quot;</span><span class="p">:</span>        <span class="n">row_ids</span><span class="p">,</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>            <span class="s2">&quot;slots&quot;</span><span class="p">:</span>          <span class="n">slots</span><span class="p">,</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            <span class="s2">&quot;include_scores&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        <span class="p">},</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="p">)</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">result</span> <span class="o">=</span> <span class="n">unbind_slots</span><span class="p">(</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">db_name</span><span class="o">=</span><span class="s2">&quot;my_db&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;triples&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    <span class="n">row_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="n">slots</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;subject&quot;</span><span class="p">,</span> <span class="s2">&quot;predicate&quot;</span><span class="p">,</span> <span class="s2">&quot;object&quot;</span><span class="p">],</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="p">)</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Expected output:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="nt">&quot;predicate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;works_at&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="nt">&quot;object&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Acme Corp&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="nt">&quot;_scores&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.97</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;predicate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.88</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;object&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.91</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">}</span>
-</code></pre></div>
 
 
 
@@ -2263,10 +2317,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
       
     
   </body>

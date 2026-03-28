@@ -283,6 +283,8 @@
       
         
       
+        
+      
     
     
       
@@ -412,6 +414,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/semantic-cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Cache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -430,6 +453,8 @@
       
         
           
+        
+      
         
       
         
@@ -776,6 +801,27 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Cache
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2069,7 +2115,7 @@
 </table>
 <hr />
 <h2 id="behavior">Behavior<a class="headerlink" href="#behavior" title="Permanent link">&para;</a></h2>
-<p><strong>Similarity matrix</strong> — Neural embeddings are computed for all unique source and target slot values. A full similarity matrix is built using batch phase similarity, then the top-k matches per source row are extracted.</p>
+<p><strong>Similarity matrix</strong> — Neural embeddings are computed for all unique source and target slot values. A full similarity matrix is built using batch vector similarity, then the top-k matches per source row are extracted.</p>
 <p><strong>Margin-based NULL detection</strong> — If the gap between the best and second-best match for a source row is below <code>min_margin</code>, the match is flagged as ambiguous. This avoids returning overconfident low-quality joins.</p>
 <p><strong>Cross-field matching</strong> — Source and target slots can have different names and schemas. Matching is purely based on embedding similarity, enabling joins across heterogeneous collections.</p>
 <p><strong>Timing</strong> — The response includes a <code>timing</code> object with millisecond breakdowns for embedding and matching phases.</p>

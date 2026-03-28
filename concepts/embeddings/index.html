@@ -285,6 +285,8 @@
       
         
       
+        
+      
     
     
       
@@ -521,6 +523,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic-cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Cache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -539,6 +562,8 @@
       
         
           
+        
+      
         
       
         
@@ -885,6 +910,27 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Cache
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1984,8 +2030,8 @@
 <h2 id="how-embedding-dimensions-work">How Embedding Dimensions Work<a class="headerlink" href="#how-embedding-dimensions-work" title="Permanent link">&para;</a></h2>
 <p>HyperBinder's internal representation has a fixed capacity (256 dimensions by default for semantic fields). When your embedding model produces vectors of a different size, HyperBinder adapts automatically:</p>
 <ul>
-<li><strong>Smaller embeddings</strong> (embed_dim ≤ internal capacity): No fidelity loss. HyperBinder interpolates to fill the representation.</li>
-<li><strong>Larger embeddings</strong> (embed_dim &gt; internal capacity): Some compression occurs. HyperBinder auto-detects your model's characteristics and uses the best strategy, but information is necessarily lost.</li>
+<li><strong>Smaller embeddings</strong> (embed_dim &lt; 256): <strong>Not recommended.</strong> Embedding models with fewer than 256 dimensions do not provide enough information for reliable semantic ranking. Use a model with at least 256 dimensions.</li>
+<li><strong>Larger embeddings</strong> (embed_dim ≥ 256): HyperBinder auto-detects your model's characteristics and uses the best compression strategy. Some information is necessarily lost at higher compression ratios.</li>
 </ul>
 <p>The <strong>compression ratio</strong> (<code>embed_dim / internal_dim</code>) determines how much information is preserved:</p>
 <table>
@@ -1997,11 +2043,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>≤ 1.0×</td>
-<td>Lossless</td>
-<td>No information lost</td>
-</tr>
 <tr>
 <td>1–2×</td>
 <td>Excellent</td>
@@ -2131,6 +2172,7 @@
 <p>HyperBinder's encoding quality improves as it sees more data. The first few rows use a general-purpose encoding strategy. After accumulating statistics about your data distribution, the encoding automatically adapts for better fidelity. No action is needed — this is fully automatic.</p>
 <h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <ul>
+<li><strong>Use an embedding model with at least 256 dimensions.</strong> Models below 256 dimensions are not recommended and will produce a runtime warning.</li>
 <li><strong>Always use the same embedding model for ingest and query.</strong> Switching models invalidates the internal representation.</li>
 <li><strong>Lower-dimensional models often give better end-to-end results</strong> because less compression means higher fidelity.</li>
 <li><strong>For high-dimensional models, pre-truncate if the model supports MRL.</strong> This is the single most effective optimization.</li>

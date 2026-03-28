@@ -283,6 +283,8 @@
       
         
       
+        
+      
     
     
       
@@ -412,6 +414,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/semantic-cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Cache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -430,6 +453,8 @@
       
         
           
+        
+      
         
       
         
@@ -776,6 +801,27 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Cache
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2031,7 +2077,7 @@
 </table>
 <p><strong>Slot query format</strong> — each entry in <code>slot_queries</code> can be a plain string or a full config object:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Einstein&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;query&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Einstein&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;filter&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;threshold&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="p">},</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;predicate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;query&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;developed&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;exact&quot;</span><span class="w"> </span><span class="p">},</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;object&quot;</span><span class="p">:</span><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;query&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;physics&quot;</span><span class="p">,</span><span class="w">   </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;semantic&quot;</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
@@ -2068,11 +2114,25 @@
 <td>schema-inferred</td>
 <td>Encoding override for this slot</td>
 </tr>
+<tr>
+<td><code>mode</code></td>
+<td>string</td>
+<td>❌</td>
+<td>schema or <code>"rank"</code></td>
+<td><code>"filter"</code> eliminates candidates below threshold; <code>"rank"</code> contributes to score</td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td>float</td>
+<td>❌</td>
+<td>schema or <code>0.0</code></td>
+<td>Minimum similarity for filter mode (0.0 to 1.0)</td>
+</tr>
 </tbody>
 </table>
 <hr />
 <h2 id="behavior">Behavior<a class="headerlink" href="#behavior" title="Permanent link">&para;</a></h2>
-<p>Each slot query is encoded independently using its slot's encoding strategy (or the provided override). Scores from all slots are combined as a weighted average to produce a final ranking. Semantic slot queries have their embeddings loaded into the cache before the Rust call.</p>
+<p>Each slot query is encoded independently using its slot's encoding strategy (or the provided override). Slots with <code>mode="filter"</code> eliminate candidates whose similarity falls below <code>threshold</code> before ranking. Remaining candidates are scored by a weighted average of <code>mode="rank"</code> slots only. Semantic slot queries have their embeddings loaded into the cache before the Rust call.</p>
 <p>A schema is required — either stored in metadata from ingest, or provided via <code>schema_json_data</code>.</p>
 <hr />
 <h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
@@ -2147,6 +2207,8 @@
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Weights do not need to sum to 1.0 — they are used as relative importance signals.</li>
+<li>Filter-mode slots do not contribute to the ranking score. Multiple filter slots are conjunctive (AND).</li>
+<li>If <code>mode</code> is not specified in the query, the schema-level default is used (defaults to <code>"rank"</code>).</li>
 <li>For a single-slot query, prefer <code>/compose/search_slot</code> for simplicity.</li>
 <li>Schema must be available — either stored from ingest or passed in <code>schema_json_data</code>.</li>
 </ul>
