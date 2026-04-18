@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../join/">
+        <link rel="prev" href="../tools/">
       
       
-        <link rel="next" href="../links_ingest/">
+        <link rel="next" href="../registry/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Row CRUD - HyperBinder SDK</title>
+        <title>Session - HyperBinder SDK</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#row-crud-endpoints" class="md-skip">
+        <a href="#session" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Row CRUD
+              Session
             
           </span>
         </div>
@@ -446,6 +446,8 @@
       
   
   
+    
+  
   
   
     
@@ -475,13 +477,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -503,7 +503,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             API Reference
@@ -812,6 +812,8 @@
                 
   
   
+    
+  
   
   
     
@@ -842,18 +844,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../agent/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -870,7 +870,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             Agent
@@ -886,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/builtin-tools/" class="md-nav__link">
+      <a href="../builtin-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -907,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/tools/" class="md-nav__link">
+      <a href="../tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -925,10 +925,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../agent/session/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Session
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -937,6 +957,209 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restoring-a-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restoring a Session
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agentsession" class="md-nav__link">
+    <span class="md-ellipsis">
+      AgentSession
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession" class="md-nav__link">
+    <span class="md-ellipsis">
+      AgentSession
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AgentSession">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.hb" class="md-nav__link">
+    <span class="md-ellipsis">
+      hb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.session_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      session_id
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      collections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.intersections" class="md-nav__link">
+    <span class="md-ellipsis">
+      intersections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.tool_registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      tool_registry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.create" class="md-nav__link">
+    <span class="md-ellipsis">
+      create
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      restore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.register_collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      register_collection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.warmup" class="md-nav__link">
+    <span class="md-ellipsis">
+      warmup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.register_warmup_hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      register_warmup_hook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.save" class="md-nav__link">
+    <span class="md-ellipsis">
+      save
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collectionmeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      CollectionMeta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.agent.session.CollectionMeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      CollectionMeta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intersectionmeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      IntersectionMeta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.agent.session.IntersectionMeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      IntersectionMeta
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -949,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/registry/" class="md-nav__link">
+      <a href="../registry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -970,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/loop/" class="md-nav__link">
+      <a href="../loop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/adapters/" class="md-nav__link">
+      <a href="../adapters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1012,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/sandbox/" class="md-nav__link">
+      <a href="../sandbox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1033,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/procedural/" class="md-nav__link">
+      <a href="../procedural/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1129,10 +1352,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1152,11 +1373,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -1170,7 +1393,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             REST API
@@ -1229,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build_ingest_data/" class="md-nav__link">
+      <a href="../../api-client/build_ingest_data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1250,7 +1473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upload_document/" class="md-nav__link">
+      <a href="../../api-client/upload_document/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1344,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../query_rag_symbolic/" class="md-nav__link">
+      <a href="../../api-client/query_rag_symbolic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1365,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multihop/" class="md-nav__link">
+      <a href="../../api-client/multihop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1386,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multihop_unstructured/" class="md-nav__link">
+      <a href="../../api-client/multihop_unstructured/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1407,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../analogy/" class="md-nav__link">
+      <a href="../../api-client/analogy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1428,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bundle_search/" class="md-nav__link">
+      <a href="../../api-client/bundle_search/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1449,7 +1672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../batch_match/" class="md-nav__link">
+      <a href="../../api-client/batch_match/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1470,7 +1693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../search_slot/" class="md-nav__link">
+      <a href="../../api-client/search_slot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1491,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../search_slots/" class="md-nav__link">
+      <a href="../../api-client/search_slots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1512,7 +1735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../traverse_fuzzy/" class="md-nav__link">
+      <a href="../../api-client/traverse_fuzzy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1533,7 +1756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extract/" class="md-nav__link">
+      <a href="../../api-client/extract/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1554,7 +1777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unbind/" class="md-nav__link">
+      <a href="../../api-client/unbind/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1575,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../combined/" class="md-nav__link">
+      <a href="../../api-client/combined/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1601,10 +1824,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1619,11 +1840,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -1637,7 +1860,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             SQL
@@ -1651,7 +1874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../select/" class="md-nav__link">
+      <a href="../../api-client/select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1672,7 +1895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../join/" class="md-nav__link">
+      <a href="../../api-client/join/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1690,30 +1913,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Row CRUD
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../api-client/row_crud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1722,272 +1925,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#post-rowinsert" class="md-nav__link">
-    <span class="md-ellipsis">
-      POST /row/insert/
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="POST /row/insert/">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request Body
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      Behavior
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-responses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-rowget" class="md-nav__link">
-    <span class="md-ellipsis">
-      POST /row/get/
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="POST /row/get/">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request Body
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-responses_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-rowupdate" class="md-nav__link">
-    <span class="md-ellipsis">
-      POST /row/update/
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="POST /row/update/">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request Body
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#behavior_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Behavior
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-responses_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-rowdelete" class="md-nav__link">
-    <span class="md-ellipsis">
-      POST /row/delete/
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="POST /row/delete/">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request Body
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-responses_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-rowdelete_filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      POST /row/delete_filter/
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="POST /row/delete_filter/">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request Body
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-responses_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schema Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2055,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links_ingest/" class="md-nav__link">
+      <a href="../../api-client/links_ingest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2076,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links_match/" class="md-nav__link">
+      <a href="../../api-client/links_match/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2097,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links_list/" class="md-nav__link">
+      <a href="../../api-client/links_list/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2356,46 +2293,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#post-rowinsert" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
-      POST /row/insert/
+      Quick Start
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="POST /row/insert/">
+    <nav class="md-nav" aria-label="Quick Start">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#request-body" class="md-nav__link">
+  <a href="#restoring-a-session" class="md-nav__link">
     <span class="md-ellipsis">
-      Request Body
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      Behavior
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-responses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Responses
+      Restoring a Session
     </span>
   </a>
   
@@ -2407,37 +2317,118 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-rowget" class="md-nav__link">
+  <a href="#agentsession" class="md-nav__link">
     <span class="md-ellipsis">
-      POST /row/get/
+      AgentSession
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="POST /row/get/">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession" class="md-nav__link">
+    <span class="md-ellipsis">
+      AgentSession
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AgentSession">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#request-body_1" class="md-nav__link">
+  <a href="#hybi.agent.session.AgentSession.hb" class="md-nav__link">
     <span class="md-ellipsis">
-      Request Body
+      hb
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#response_1" class="md-nav__link">
+  <a href="#hybi.agent.session.AgentSession.session_id" class="md-nav__link">
     <span class="md-ellipsis">
-      Response
+      session_id
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#error-responses_1" class="md-nav__link">
+  <a href="#hybi.agent.session.AgentSession.collections" class="md-nav__link">
     <span class="md-ellipsis">
-      Error Responses
+      collections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.intersections" class="md-nav__link">
+    <span class="md-ellipsis">
+      intersections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.tool_registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      tool_registry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.create" class="md-nav__link">
+    <span class="md-ellipsis">
+      create
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      restore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.register_collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      register_collection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.warmup" class="md-nav__link">
+    <span class="md-ellipsis">
+      warmup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.register_warmup_hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      register_warmup_hook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.session.AgentSession.save" class="md-nav__link">
+    <span class="md-ellipsis">
+      save
     </span>
   </a>
   
@@ -2449,153 +2440,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-rowupdate" class="md-nav__link">
+  <a href="#collectionmeta" class="md-nav__link">
     <span class="md-ellipsis">
-      POST /row/update/
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="POST /row/update/">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request Body
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#behavior_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Behavior
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-responses_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-rowdelete" class="md-nav__link">
-    <span class="md-ellipsis">
-      POST /row/delete/
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="POST /row/delete/">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request Body
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-responses_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-rowdelete_filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      POST /row/delete_filter/
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="POST /row/delete_filter/">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#request-body_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request Body
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-responses_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
+      CollectionMeta
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#schema-example" class="md-nav__link">
+  <a href="#hybi.agent.session.CollectionMeta" class="md-nav__link">
     <span class="md-ellipsis">
-      Schema Example
+      CollectionMeta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intersectionmeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      IntersectionMeta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.agent.session.IntersectionMeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      IntersectionMeta
     </span>
   </a>
   
@@ -2619,411 +2493,661 @@
   
 
 
-<h1 id="row-crud-endpoints">Row CRUD Endpoints<a class="headerlink" href="#row-crud-endpoints" title="Permanent link">&para;</a></h1>
-<p>Four endpoints for single-row operations on <code>Row</code> molecule collections. These provide relational-style CRUD with primary key identity, atomic updates, and duplicate detection.</p>
-<blockquote>
-<p><strong>Architecture note:</strong> Row CRUD is part of <code>RelationalTable</code> — structured storage with chain binding encoding. It does <strong>not</strong> generate semantic embeddings. For semantic search over row data, use <code>Catalog.index()</code> separately.</p>
-</blockquote>
-<hr />
-<h2 id="post-rowinsert"><code>POST /row/insert/</code><a class="headerlink" href="#post-rowinsert" title="Permanent link">&para;</a></h2>
-<p>Insert a single row into a <code>Row</code> molecule collection.</p>
-<h3 id="request-body">Request Body<a class="headerlink" href="#request-body" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>db_name</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Database name</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Namespace (must exist and use <code>Row</code> molecule)</td>
-</tr>
-<tr>
-<td><code>row</code></td>
-<td>object</td>
-<td>✅</td>
-<td>Row data including the primary key field</td>
-</tr>
-<tr>
-<td><code>template_schema</code></td>
-<td>object</td>
-<td>✅</td>
-<td>Row molecule schema with <code>primary_key</code> defined</td>
-</tr>
-</tbody>
-</table>
-<h3 id="behavior">Behavior<a class="headerlink" href="#behavior" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Checks for duplicate primary key — returns <code>409</code> if exists</li>
-<li>Encodes row using chain binding: <code>pk ⊛ (f₁⊛v₁) ⊛ (f₂⊛v₂) ⊛ ...</code></li>
-<li>Row ID is assigned atomically (safe for concurrent inserts)</li>
-<li>The namespace must have been created first via <code>/build_ingest_data/</code> with a <code>Row</code> schema</li>
-</ul>
-<h3 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;pk_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;id&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;pk_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;E011&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">&quot;row_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;employees&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">&quot;db_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_db&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">&quot;note&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Row stored. For semantic search, use Catalog.index() or Catalog.reindex().&quot;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+<h1 id="session">Session<a class="headerlink" href="#session" title="Permanent link">&para;</a></h1>
+<p>The <code>AgentSession</code> is the top-level owner of agent state—HyperBinder client, collection metadata, intersection metadata, and the tool registry.</p>
+<pre class="mermaid"><code>graph TB
+    Session["AgentSession"]
+    Session --&gt; HB["hb&lt;br/&gt;HyperBinder client"]
+    Session --&gt; Collections["collections&lt;br/&gt;Dict[str, CollectionMeta]"]
+    Session --&gt; Intersections["intersections&lt;br/&gt;List[IntersectionMeta]"]
+    Session --&gt; Registry["tool_registry&lt;br/&gt;ToolRegistry"]
+    Collections --&gt; Meta["CollectionMeta&lt;br/&gt;schema, fields, stats"]
+    Intersections --&gt; IX["IntersectionMeta&lt;br/&gt;source, target, relation"]</code></pre>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi</span><span class="w"> </span><span class="kn">import</span> <span class="n">HyperBinder</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.agent</span><span class="w"> </span><span class="kn">import</span> <span class="n">AgentSession</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">hb</span> <span class="o">=</span> <span class="n">HyperBinder</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Create a new session (auto-registers all built-in tools)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">session</span> <span class="o">=</span> <span class="n">AgentSession</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">hb</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># Register a collection after a create_collection tool runs</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">session</span><span class="o">.</span><span class="n">register_collection</span><span class="p">(</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;drugs&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">schema</span><span class="o">=</span><span class="n">compound_obj</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">schema_type</span><span class="o">=</span><span class="s2">&quot;catalog&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">row_count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">field_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;mechanism&quot;</span><span class="p">,</span> <span class="s2">&quot;indication&quot;</span><span class="p">],</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># Save session metadata for later</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">session</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;session.json&quot;</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="error-responses">Error Responses<a class="headerlink" href="#error-responses" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Condition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>400</code></td>
-<td>Row missing primary key, or namespace uses a non-Row molecule</td>
-</tr>
-<tr>
-<td><code>404</code></td>
-<td>Namespace not found</td>
-</tr>
-<tr>
-<td><code>409</code></td>
-<td>Duplicate primary key</td>
-</tr>
-<tr>
-<td><code>500</code></td>
-<td>Unexpected internal error</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="post-rowget"><code>POST /row/get/</code><a class="headerlink" href="#post-rowget" title="Permanent link">&para;</a></h2>
-<p>Retrieve a row by primary key (O(1) lookup).</p>
-<h3 id="request-body_1">Request Body<a class="headerlink" href="#request-body_1" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>db_name</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Database name</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Namespace</td>
-</tr>
-<tr>
-<td><code>pk_field</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Primary key field name</td>
-</tr>
-<tr>
-<td><code>pk_value</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Primary key value to look up</td>
-</tr>
-</tbody>
-</table>
-<h3 id="response_1">Response<a class="headerlink" href="#response_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;row_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;E011&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Zara&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;department&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Engineering&quot;</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;employees&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">&quot;db_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_db&quot;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
+<h3 id="restoring-a-session">Restoring a Session<a class="headerlink" href="#restoring-a-session" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Restore from saved metadata (reattaches to HyperBinder storage)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">session</span> <span class="o">=</span> <span class="n">AgentSession</span><span class="o">.</span><span class="n">restore</span><span class="p">(</span><span class="n">hb</span><span class="p">,</span> <span class="s2">&quot;session.json&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Collection data persists in HyperBinder—save/restore only</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># tracks which collections and intersections belong to this session</span>
 </code></pre></div>
-<h3 id="error-responses_1">Error Responses<a class="headerlink" href="#error-responses_1" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Condition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>404</code></td>
-<td>Namespace or row not found</td>
-</tr>
-<tr>
-<td><code>500</code></td>
-<td>Unexpected internal error</td>
-</tr>
-</tbody>
-</table>
+<div class="admonition note">
+<p class="admonition-title">Schema on restore</p>
+<p>Restored sessions have <code>schema=None</code> on <code>CollectionMeta</code> objects. The <code>schema_type</code> and <code>field_names</code> are preserved, which is sufficient for query dispatch.</p>
+</div>
 <hr />
-<h2 id="post-rowupdate"><code>POST /row/update/</code><a class="headerlink" href="#post-rowupdate" title="Permanent link">&para;</a></h2>
-<p>Atomically update a row by primary key.</p>
-<h3 id="request-body_2">Request Body<a class="headerlink" href="#request-body_2" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>db_name</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Database name</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Namespace</td>
-</tr>
-<tr>
-<td><code>pk_field</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Primary key field name</td>
-</tr>
-<tr>
-<td><code>pk_value</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Primary key value identifying the row</td>
-</tr>
-<tr>
-<td><code>updates</code></td>
-<td>object</td>
-<td>✅</td>
-<td>Fields to update. Cannot include <code>pk_field</code></td>
-</tr>
-<tr>
-<td><code>template_schema</code></td>
-<td>object</td>
-<td>❌</td>
-<td>Schema for re-encoding. Falls back to stored schema</td>
-</tr>
-</tbody>
-</table>
-<h3 id="behavior_1">Behavior<a class="headerlink" href="#behavior_1" title="Permanent link">&para;</a></h3>
-<p>Merges <code>updates</code> into existing row data, then re-encodes the entire row atomically. The primary key cannot be updated. Semantic embeddings are not regenerated — use <code>Catalog.reindex()</code> if text fields changed.</p>
-<h3 id="response_2">Response<a class="headerlink" href="#response_2" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;atomic_row_update&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&quot;pk_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;id&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">&quot;pk_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;E011&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">&quot;row_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nt">&quot;old_values&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;salary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;95000&quot;</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nt">&quot;new_values&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;salary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;105000&quot;</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;employees&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="nt">&quot;db_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_db&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="nt">&quot;note&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Row updated. For semantic search, use Catalog.reindex() if text fields changed.&quot;</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
+<h2 id="agentsession">AgentSession<a class="headerlink" href="#agentsession" title="Permanent link">&para;</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.agent.session.AgentSession" class="doc doc-heading">
+            <code>hybi.agent.session.AgentSession</code>
+
+
+<a href="#hybi.agent.session.AgentSession" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Top-level agent session for agent.</p>
+<p>Owns the HyperBinder client, collection metadata, intersection
+metadata, and tool registry. No WorldState, no ToposAgent.</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.agent.session.AgentSession.hb" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">hb</span> <span class="o">=</span> <span class="n">hb</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.agent.session.AgentSession.hb" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.agent.session.AgentSession.session_id" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">session_id</span> <span class="o">=</span> <span class="n">session_id</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.agent.session.AgentSession.session_id" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.agent.session.AgentSession.collections" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">collections</span> <span class="o">=</span> <span class="n">collections</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.agent.session.AgentSession.collections" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.agent.session.AgentSession.intersections" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">intersections</span> <span class="o">=</span> <span class="n">intersections</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.agent.session.AgentSession.intersections" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.agent.session.AgentSession.tool_registry" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">tool_registry</span> <span class="o">=</span> <span class="n">tool_registry</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#hybi.agent.session.AgentSession.tool_registry" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.session.AgentSession.create" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">create</span><span class="p">(</span><span class="n">hb</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">session_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tools</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">procedural_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#hybi.agent.session.AgentSession.create" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Create a new agent session.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>hb</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>HyperBinder backend (LocalHyperBinder or RemoteHyperBinder).
+Required -- the session calls hb.ingest(), hb.search(), etc.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>session_id</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional session identifier. Generated if not provided.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>tools</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="hybi.agent.tools.ToolDefinition
+
+
+  
+      dataclass
+  " href="../tools/#hybi.agent.tools.ToolDefinition">ToolDefinition</a>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional tools beyond built-ins.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>procedural_memory</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>When True, enable procedural memory to capture
+error→success code patterns from execute_code calls.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="hybi.agent.session.AgentSession" href="#hybi.agent.session.AgentSession">AgentSession</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A fully initialized AgentSession.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.session.AgentSession.restore" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">restore</span><span class="p">(</span><span class="n">hb</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">tools</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#hybi.agent.session.AgentSession.restore" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Restore a session from a saved JSON file.</p>
+<p>Reattaches to HyperBinder storage. Collection schemas are
+reconstructed from saved schema_type + field_stats via
+_build_compound(). Falls back to schema=None if reconstruction
+fails.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>hb</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>HyperBinder backend (required).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>path</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Path to the session JSON file.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>tools</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="hybi.agent.tools.ToolDefinition
+
+
+  
+      dataclass
+  " href="../tools/#hybi.agent.tools.ToolDefinition">ToolDefinition</a>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional tools beyond built-ins.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="hybi.agent.session.AgentSession" href="#hybi.agent.session.AgentSession">AgentSession</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>AgentSession with restored metadata.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.session.AgentSession.register_collection" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">register_collection</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">schema_type</span><span class="p">,</span> <span class="n">row_count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">field_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">field_descriptions</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#hybi.agent.session.AgentSession.register_collection" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Register a collection in the session metadata.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.session.AgentSession.warmup" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">warmup</span><span class="p">()</span></code>
+
+<a href="#hybi.agent.session.AgentSession.warmup" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Single-pass scan to populate field_stats with cardinality and top_values.</p>
+<p>For each collection:
+1. Ensure field_stats exist (derive from compound if available,
+   else create minimal entries from field_names).
+2. For each key field (is_key=True): aggregate once to populate
+   cardinality and top_values.
+3. For non-key EXACT fields: check cardinality ratio and promote
+   to key if low cardinality (&lt; 30% of row_count).
+4. Cache the rendered schema summary.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.session.AgentSession.register_warmup_hook" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">register_warmup_hook</span><span class="p">(</span><span class="n">hook</span><span class="p">)</span></code>
+
+<a href="#hybi.agent.session.AgentSession.register_warmup_hook" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Register a hook to run at the end of warmup().</p>
+<p>Extensions (e.g. runtime) use this to inject optional warmup
+steps without creating a hard dependency from core → extension.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.session.AgentSession.save" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">save</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+
+<a href="#hybi.agent.session.AgentSession.save" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Save session metadata to a JSON file.</p>
+<p>Collection data persists in HyperBinder storage. This just
+remembers which collections and intersections belong to this
+conversation.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><hr />
+<h2 id="collectionmeta">CollectionMeta<a class="headerlink" href="#collectionmeta" title="Permanent link">&para;</a></h2>
+<p>Metadata for a registered collection.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.agent</span><span class="w"> </span><span class="kn">import</span> <span class="n">CollectionMeta</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">meta</span> <span class="o">=</span> <span class="n">CollectionMeta</span><span class="p">(</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;drugs&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">schema</span><span class="o">=</span><span class="n">compound_obj</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">schema_type</span><span class="o">=</span><span class="s2">&quot;catalog&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">row_count</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="n">field_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;mechanism&quot;</span><span class="p">,</span> <span class="s2">&quot;indication&quot;</span><span class="p">],</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="n">field_stats</span><span class="o">=</span><span class="p">{},</span>          <span class="c1"># FieldStats per field (populated by warmup)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">slot_map</span><span class="o">=</span><span class="p">{},</span>             <span class="c1"># root_slot -&gt; column_name mapping</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">key_fields</span><span class="o">=</span><span class="p">[],</span>           <span class="c1"># fields marked as keys (exact-encoded)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>          <span class="c1"># human-readable description</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">field_descriptions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1"># per-field descriptions</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="p">)</span>
 </code></pre></div>
-<h3 id="error-responses_2">Error Responses<a class="headerlink" href="#error-responses_2" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Condition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>400</code></td>
-<td>Attempted to update the primary key field</td>
-</tr>
-<tr>
-<td><code>404</code></td>
-<td>Namespace or row not found</td>
-</tr>
-<tr>
-<td><code>500</code></td>
-<td>Unexpected internal error</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="post-rowdelete"><code>POST /row/delete/</code><a class="headerlink" href="#post-rowdelete" title="Permanent link">&para;</a></h2>
-<p>Delete a row by primary key.</p>
-<h3 id="request-body_3">Request Body<a class="headerlink" href="#request-body_3" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>db_name</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Database name</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Namespace</td>
-</tr>
-<tr>
-<td><code>pk_field</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Primary key field name</td>
-</tr>
-<tr>
-<td><code>pk_value</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Primary key value to delete</td>
-</tr>
-</tbody>
-</table>
-<h3 id="response_3">Response<a class="headerlink" href="#response_3" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;deleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;pk_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;pk_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;E011&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;row_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;employees&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nt">&quot;db_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_db&quot;</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.agent.session.CollectionMeta" class="doc doc-heading">
+            <code>hybi.agent.session.CollectionMeta</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.agent.session.CollectionMeta" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Metadata for a registered collection.</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><hr />
+<h2 id="intersectionmeta">IntersectionMeta<a class="headerlink" href="#intersectionmeta" title="Permanent link">&para;</a></h2>
+<p>Metadata for a declared cross-collection link.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.agent</span><span class="w"> </span><span class="kn">import</span> <span class="n">IntersectionMeta</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">ix</span> <span class="o">=</span> <span class="n">IntersectionMeta</span><span class="p">(</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">source</span><span class="o">=</span><span class="s2">&quot;drugs.name&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">target</span><span class="o">=</span><span class="s2">&quot;trials.drug_name&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">relation</span><span class="o">=</span><span class="s2">&quot;identity&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">)</span>
 </code></pre></div>
-<h3 id="error-responses_3">Error Responses<a class="headerlink" href="#error-responses_3" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Condition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>404</code></td>
-<td>Namespace or row not found</td>
-</tr>
-<tr>
-<td><code>500</code></td>
-<td>Unexpected internal error</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="post-rowdelete_filter"><code>POST /row/delete_filter/</code><a class="headerlink" href="#post-rowdelete_filter" title="Permanent link">&para;</a></h2>
-<p>Bulk delete rows matching a field value.</p>
-<h3 id="request-body_4">Request Body<a class="headerlink" href="#request-body_4" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>db_name</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Database name</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Namespace</td>
-</tr>
-<tr>
-<td><code>field</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Field to filter on</td>
-</tr>
-<tr>
-<td><code>value</code></td>
-<td>string</td>
-<td>✅</td>
-<td>Value to match (exact)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="response_4">Response<a class="headerlink" href="#response_4" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&quot;rows_deleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">&quot;filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;department&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Engineering&quot;</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;employees&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="nt">&quot;db_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_db&quot;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
-</code></pre></div>
-<h3 id="error-responses_4">Error Responses<a class="headerlink" href="#error-responses_4" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Condition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>404</code></td>
-<td>Namespace not found</td>
-</tr>
-<tr>
-<td><code>500</code></td>
-<td>Unexpected internal error</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>All Row CRUD endpoints require the namespace to be created with <code>"molecule": "Row"</code> and a <code>primary_key</code> defined in the schema.</li>
-<li>The primary key is immutable — attempting to update it returns <code>400</code>.</li>
-<li><code>delete_filter</code> uses exact string matching — it does not support operators.</li>
-<li>Row CRUD does not touch semantic embeddings. Use <code>Catalog.reindex()</code> after updates if semantic search is needed.</li>
-</ul>
-<hr />
-<h2 id="schema-example">Schema Example<a class="headerlink" href="#schema-example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">ROW_SCHEMA</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="s2">&quot;molecule&quot;</span><span class="p">:</span> <span class="s2">&quot;Row&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="s2">&quot;primary_key&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;id&quot;</span><span class="p">},</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="s2">&quot;fields&quot;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="s2">&quot;id&quot;</span><span class="p">:</span>         <span class="p">{</span><span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;exact&quot;</span><span class="p">},</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="s2">&quot;name&quot;</span><span class="p">:</span>       <span class="p">{</span><span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;exact&quot;</span><span class="p">},</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;exact&quot;</span><span class="p">},</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        <span class="s2">&quot;salary&quot;</span><span class="p">:</span>     <span class="p">{</span><span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;numeric&quot;</span><span class="p">},</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="p">}</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="p">}</span>
-</code></pre></div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.agent.session.IntersectionMeta" class="doc doc-heading">
+            <code>hybi.agent.session.IntersectionMeta</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#hybi.agent.session.IntersectionMeta" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Metadata for a declared intersection.</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
 
 
 

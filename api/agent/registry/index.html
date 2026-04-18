@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../bundle_search/">
+        <link rel="prev" href="../session/">
       
       
-        <link rel="next" href="../search_slot/">
+        <link rel="next" href="../loop/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Batch Match - HyperBinder SDK</title>
+        <title>Tool Registry - HyperBinder SDK</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#post-composebatch_matchdb_name" class="md-skip">
+        <a href="#tool-registry" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Batch Match
+              Tool Registry
             
           </span>
         </div>
@@ -446,6 +446,8 @@
       
   
   
+    
+  
   
   
     
@@ -475,13 +477,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -503,7 +503,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             API Reference
@@ -812,6 +812,8 @@
                 
   
   
+    
+  
   
   
     
@@ -842,18 +844,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../agent/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -870,7 +870,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             Agent
@@ -886,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/builtin-tools/" class="md-nav__link">
+      <a href="../builtin-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -907,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/tools/" class="md-nav__link">
+      <a href="../tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -928,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/session/" class="md-nav__link">
+      <a href="../session/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -946,10 +946,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../agent/registry/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tool Registry
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -958,6 +978,197 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registering-custom-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registering Custom Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exporting Schemas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolregistry" class="md-nav__link">
+    <span class="md-ellipsis">
+      ToolRegistry
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ToolRegistry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hooks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolregistry_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ToolRegistry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry" class="md-nav__link">
+    <span class="md-ellipsis">
+      ToolRegistry
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ToolRegistry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.tool_names" class="md-nav__link">
+    <span class="md-ellipsis">
+      tool_names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.register" class="md-nav__link">
+    <span class="md-ellipsis">
+      register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.register_many" class="md-nav__link">
+    <span class="md-ellipsis">
+      register_many
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.get" class="md-nav__link">
+    <span class="md-ellipsis">
+      get
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.list_tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      list_tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.invoke" class="md-nav__link">
+    <span class="md-ellipsis">
+      invoke
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.export_schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      export_schemas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.register_pre_hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      register_pre_hook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.register_post_hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      register_post_hook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.remove_hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_hook
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -970,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/loop/" class="md-nav__link">
+      <a href="../loop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/adapters/" class="md-nav__link">
+      <a href="../adapters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1012,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/sandbox/" class="md-nav__link">
+      <a href="../sandbox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1033,7 +1244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agent/procedural/" class="md-nav__link">
+      <a href="../procedural/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1129,10 +1340,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1152,11 +1361,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -1170,7 +1381,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             REST API
@@ -1229,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build_ingest_data/" class="md-nav__link">
+      <a href="../../api-client/build_ingest_data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1250,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upload_document/" class="md-nav__link">
+      <a href="../../api-client/upload_document/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1276,10 +1487,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1312,11 +1521,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -1330,7 +1541,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Query
@@ -1344,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../query_rag_symbolic/" class="md-nav__link">
+      <a href="../../api-client/query_rag_symbolic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1365,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multihop/" class="md-nav__link">
+      <a href="../../api-client/multihop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1386,7 +1597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multihop_unstructured/" class="md-nav__link">
+      <a href="../../api-client/multihop_unstructured/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1407,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../analogy/" class="md-nav__link">
+      <a href="../../api-client/analogy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1428,7 +1639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bundle_search/" class="md-nav__link">
+      <a href="../../api-client/bundle_search/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1446,30 +1657,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Batch Match
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../api-client/batch_match/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1478,95 +1669,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#request" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      Behavior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#responses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Responses
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Responses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#200-ok" class="md-nav__link">
-    <span class="md-ellipsis">
-      200 OK
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-responses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Responses
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1579,7 +1681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../search_slot/" class="md-nav__link">
+      <a href="../../api-client/search_slot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../search_slots/" class="md-nav__link">
+      <a href="../../api-client/search_slots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../traverse_fuzzy/" class="md-nav__link">
+      <a href="../../api-client/traverse_fuzzy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1642,7 +1744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extract/" class="md-nav__link">
+      <a href="../../api-client/extract/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1663,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unbind/" class="md-nav__link">
+      <a href="../../api-client/unbind/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1684,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../combined/" class="md-nav__link">
+      <a href="../../api-client/combined/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1760,7 +1862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../select/" class="md-nav__link">
+      <a href="../../api-client/select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1781,7 +1883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../join/" class="md-nav__link">
+      <a href="../../api-client/join/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1802,7 +1904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../row_crud/" class="md-nav__link">
+      <a href="../../api-client/row_crud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1878,7 +1980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links_ingest/" class="md-nav__link">
+      <a href="../../api-client/links_ingest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1899,7 +2001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links_match/" class="md-nav__link">
+      <a href="../../api-client/links_match/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1920,7 +2022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links_list/" class="md-nav__link">
+      <a href="../../api-client/links_list/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2179,46 +2281,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#request" class="md-nav__link">
+  <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Request
+      Usage
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      Behavior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#responses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Responses
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Responses">
+    <nav class="md-nav" aria-label="Usage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#200-ok" class="md-nav__link">
+  <a href="#registering-custom-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      200 OK
+      Registering Custom Tools
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#error-responses" class="md-nav__link">
+  <a href="#exporting-schemas" class="md-nav__link">
     <span class="md-ellipsis">
-      Error Responses
+      Exporting Schemas
     </span>
   </a>
   
@@ -2230,20 +2314,140 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
+  <a href="#toolregistry" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes
+      ToolRegistry
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ToolRegistry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hooks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolregistry_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ToolRegistry
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#hybi.agent.registry.ToolRegistry" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      ToolRegistry
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="ToolRegistry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.tool_names" class="md-nav__link">
+    <span class="md-ellipsis">
+      tool_names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.register" class="md-nav__link">
+    <span class="md-ellipsis">
+      register
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.register_many" class="md-nav__link">
+    <span class="md-ellipsis">
+      register_many
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.get" class="md-nav__link">
+    <span class="md-ellipsis">
+      get
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.list_tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      list_tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.invoke" class="md-nav__link">
+    <span class="md-ellipsis">
+      invoke
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.export_schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      export_schemas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.register_pre_hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      register_pre_hook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.register_post_hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      register_post_hook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybi.agent.registry.ToolRegistry.remove_hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_hook
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2265,243 +2469,488 @@
   
 
 
-<h1 id="post-composebatch_matchdb_name"><code>POST /compose/batch_match/{db_name}</code><a class="headerlink" href="#post-composebatch_matchdb_name" title="Permanent link">&para;</a></h1>
-<p>Performs cross-collection semantic matching. For each row in a source collection, finds the best matching rows in a target collection based on slot embedding similarity. Enables cross-collection joins via the HDC intersection layer.</p>
-<hr />
-<h2 id="request">Request<a class="headerlink" href="#request" title="Permanent link">&para;</a></h2>
-<p><strong>Content-Type:</strong> <code>application/json</code></p>
-<p><strong>URL Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>db_name</code></td>
-<td>Name of the database containing both collections</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Body:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>source_collection</code></td>
-<td>string</td>
-<td>✅</td>
-<td>—</td>
-<td>Namespace of the source collection</td>
-</tr>
-<tr>
-<td><code>source_slot</code></td>
-<td>string</td>
-<td>✅</td>
-<td>—</td>
-<td>Field in the source collection to match on</td>
-</tr>
-<tr>
-<td><code>target_collection</code></td>
-<td>string</td>
-<td>✅</td>
-<td>—</td>
-<td>Namespace of the target collection</td>
-</tr>
-<tr>
-<td><code>target_slot</code></td>
-<td>string</td>
-<td>✅</td>
-<td>—</td>
-<td>Field in the target collection to match against</td>
-</tr>
-<tr>
-<td><code>top_k_per_source</code></td>
-<td>int</td>
-<td>❌</td>
-<td><code>2</code></td>
-<td>Number of top target matches per source row</td>
-</tr>
-<tr>
-<td><code>similarity_threshold</code></td>
-<td>float</td>
-<td>❌</td>
-<td><code>0.5</code></td>
-<td>Minimum similarity score to consider a match</td>
-</tr>
-<tr>
-<td><code>min_margin</code></td>
-<td>float</td>
-<td>❌</td>
-<td><code>0.05</code></td>
-<td>Minimum score gap between top-1 and top-2 required for a confident match</td>
-</tr>
-<tr>
-<td><code>source_row_ids</code></td>
-<td>list of int</td>
-<td>❌</td>
-<td><code>null</code></td>
-<td>Specific source rows to match. If omitted, all rows are used</td>
-</tr>
-<tr>
-<td><code>target_row_ids</code></td>
-<td>list of int</td>
-<td>❌</td>
-<td><code>null</code></td>
-<td>Specific target rows to match against. If omitted, all rows are used</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="behavior">Behavior<a class="headerlink" href="#behavior" title="Permanent link">&para;</a></h2>
-<p><strong>Similarity matrix</strong> — Neural embeddings are computed for all unique source and target slot values. A full similarity matrix is built using batch vector similarity, then the top-k matches per source row are extracted.</p>
-<p><strong>Margin-based NULL detection</strong> — If the gap between the best and second-best match for a source row is below <code>min_margin</code>, the match is flagged as ambiguous. This avoids returning overconfident low-quality joins.</p>
-<p><strong>Cross-field matching</strong> — Source and target slots can have different names and schemas. Matching is purely based on embedding similarity, enabling joins across heterogeneous collections.</p>
-<p><strong>Timing</strong> — The response includes a <code>timing</code> object with millisecond breakdowns for embedding and matching phases.</p>
-<hr />
-<h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
-<h3 id="200-ok">200 OK<a class="headerlink" href="#200-ok" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">&quot;source_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">&quot;target_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.912</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">&quot;margin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.143</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;matched&quot;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="nt">&quot;source_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="nt">&quot;target_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.431</span><span class="p">,</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">      </span><span class="nt">&quot;margin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.012</span><span class="p">,</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ambiguous&quot;</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="p">],</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="nt">&quot;source_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="nt">&quot;target_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="nt">&quot;timing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="nt">&quot;embed_ms&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">42.1</span><span class="p">,</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="nt">&quot;match_ms&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">8.3</span><span class="p">,</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="nt">&quot;total_ms&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">51.7</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">}</span>
+<h1 id="tool-registry">Tool Registry<a class="headerlink" href="#tool-registry" title="Permanent link">&para;</a></h1>
+<p>The <code>ToolRegistry</code> holds all available tools and dispatches invocations. It validates required parameters before calling handlers and returns clean error results on failure.</p>
+<pre class="mermaid"><code>flowchart LR
+    Register["register(tool)"] --&gt; Registry["ToolRegistry"]
+    Registry --&gt; Validate["Validate&lt;br/&gt;required params"]
+    Validate --&gt; PreHook["Pre-hooks&lt;br/&gt;(auth, logging)"]
+    PreHook --&gt; Handler["Tool handler"]
+    Handler --&gt; PostHook["Post-hooks"]
+    PostHook --&gt; Result["ToolResult"]</code></pre>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">hybi.agent</span><span class="w"> </span><span class="kn">import</span> <span class="n">AgentSession</span><span class="p">,</span> <span class="n">ToolDefinition</span><span class="p">,</span> <span class="n">ToolParameter</span><span class="p">,</span> <span class="n">ToolResult</span><span class="p">,</span> <span class="n">ToolCall</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">session</span> <span class="o">=</span> <span class="n">AgentSession</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">hb</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">registry</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">tool_registry</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># List all tools</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">all_tools</span> <span class="o">=</span> <span class="n">registry</span><span class="o">.</span><span class="n">list_tools</span><span class="p">()</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># Filter by category</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">shape_tools</span> <span class="o">=</span> <span class="n">registry</span><span class="o">.</span><span class="n">list_tools</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">&quot;shape&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">query_tools</span> <span class="o">=</span> <span class="n">registry</span><span class="o">.</span><span class="n">list_tools</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">&quot;query&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># Check tool count and membership</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nb">len</span><span class="p">(</span><span class="n">registry</span><span class="p">)</span>            <span class="c1"># 10</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="s2">&quot;search&quot;</span> <span class="ow">in</span> <span class="n">registry</span>     <span class="c1"># True</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># Look up a tool by name</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">tool</span> <span class="o">=</span> <span class="n">registry</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;search&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># Invoke a tool call</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">call</span> <span class="o">=</span> <span class="n">ToolCall</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;call_1&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;search&quot;</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;kinase&quot;</span><span class="p">})</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">registry</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">call</span><span class="p">,</span> <span class="n">session</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Each result contains:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>source_id</code></td>
-<td>Row ID from the source collection</td>
-</tr>
-<tr>
-<td><code>target_id</code></td>
-<td>Matched row ID from the target collection, or <code>null</code> if unmatched</td>
-</tr>
-<tr>
-<td><code>score</code></td>
-<td>Similarity score of the best match</td>
-</tr>
-<tr>
-<td><code>margin</code></td>
-<td>Score gap between top-1 and top-2 matches</td>
-</tr>
-<tr>
-<td><code>status</code></td>
-<td><code>"matched"</code>, <code>"ambiguous"</code>, or <code>"unmatched"</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="error-responses">Error Responses<a class="headerlink" href="#error-responses" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Condition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>404</code></td>
-<td>Source or target collection not found</td>
-</tr>
-<tr>
-<td><code>500</code></td>
-<td>Unexpected internal error</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Both collections must exist within the same <code>db_name</code>.</li>
-<li>Raise <code>similarity_threshold</code> to reduce false positives; raise <code>min_margin</code> to require more decisive matches.</li>
-<li><code>source_row_ids</code> and <code>target_row_ids</code> can be used to scope the match to a subset of rows, which significantly reduces compute for large collections.</li>
-</ul>
-<hr />
-<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">SERVER_URL</span> <span class="o">=</span> <span class="s2">&quot;http://18.220.128.24:8000&quot;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">API_KEY</span>    <span class="o">=</span> <span class="s2">&quot;yourapitoken&quot;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">batch_match</span><span class="p">(</span><span class="n">db_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">source_collection</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">source_slot</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>                <span class="n">target_collection</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">target_slot</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">SERVER_URL</span><span class="si">}</span><span class="s2">/compose/batch_match/</span><span class="si">{</span><span class="n">db_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;X-API-Key&quot;</span><span class="p">:</span> <span class="n">API_KEY</span><span class="p">},</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="n">json</span><span class="o">=</span><span class="p">{</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>            <span class="s2">&quot;source_collection&quot;</span><span class="p">:</span>  <span class="n">source_collection</span><span class="p">,</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            <span class="s2">&quot;source_slot&quot;</span><span class="p">:</span>        <span class="n">source_slot</span><span class="p">,</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>            <span class="s2">&quot;target_collection&quot;</span><span class="p">:</span>  <span class="n">target_collection</span><span class="p">,</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>            <span class="s2">&quot;target_slot&quot;</span><span class="p">:</span>        <span class="n">target_slot</span><span class="p">,</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>            <span class="s2">&quot;top_k_per_source&quot;</span><span class="p">:</span>   <span class="mi">2</span><span class="p">,</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>            <span class="s2">&quot;similarity_threshold&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            <span class="s2">&quot;min_margin&quot;</span><span class="p">:</span>         <span class="mf">0.05</span><span class="p">,</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        <span class="p">},</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    <span class="p">)</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">result</span> <span class="o">=</span> <span class="n">batch_match</span><span class="p">(</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    <span class="n">db_name</span><span class="o">=</span><span class="s2">&quot;my_db&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>    <span class="n">source_collection</span><span class="o">=</span><span class="s2">&quot;expertise&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>    <span class="n">source_slot</span><span class="o">=</span><span class="s2">&quot;subject&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    <span class="n">target_collection</span><span class="o">=</span><span class="s2">&quot;employees&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>    <span class="n">target_slot</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="p">)</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<h3 id="registering-custom-tools">Registering Custom Tools<a class="headerlink" href="#registering-custom-tools" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">my_handler</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ToolResult</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">return</span> <span class="n">ToolResult</span><span class="p">(</span><span class="n">success</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;answer&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">})</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">custom_tool</span> <span class="o">=</span> <span class="n">ToolDefinition</span><span class="p">(</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my_tool&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A custom tool&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">parameters</span><span class="o">=</span><span class="p">[</span><span class="n">ToolParameter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;query&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Input&quot;</span><span class="p">)],</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">category</span><span class="o">=</span><span class="s2">&quot;external&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">handler</span><span class="o">=</span><span class="n">my_handler</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">registry</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">custom_tool</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Expected output:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;source_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.912</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;margin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.143</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;matched&quot;</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;source_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.431</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;margin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.012</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ambiguous&quot;</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="p">],</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nt">&quot;source_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nt">&quot;target_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="nt">&quot;timing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;embed_ms&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">42.1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;match_ms&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">8.3</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;total_ms&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">51.7</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span>
+<h3 id="exporting-schemas">Exporting Schemas<a class="headerlink" href="#exporting-schemas" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Raw JSON-serializable schemas (adapters translate further)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">schemas</span> <span class="o">=</span> <span class="n">registry</span><span class="o">.</span><span class="n">export_schemas</span><span class="p">()</span>
 </code></pre></div>
+<hr />
+<h2 id="toolregistry">ToolRegistry<a class="headerlink" href="#toolregistry" title="Permanent link">&para;</a></h2>
+<h3 id="hooks">Hooks<a class="headerlink" href="#hooks" title="Permanent link">&para;</a></h3>
+<p>Pre- and post-invocation hooks for validation, logging, or middleware:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">auth_hook</span><span class="p">(</span><span class="n">call</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="k">if</span> <span class="n">call</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;manage&quot;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">session</span><span class="o">.</span><span class="n">is_admin</span><span class="p">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unauthorized&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">registry</span><span class="o">.</span><span class="n">register_pre_hook</span><span class="p">(</span><span class="n">auth_hook</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Post-hooks receive (call, session, result)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">log_hook</span><span class="p">(</span><span class="n">call</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">call</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">success</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">registry</span><span class="o">.</span><span class="n">register_post_hook</span><span class="p">(</span><span class="n">log_hook</span><span class="p">)</span>
+</code></pre></div>
+<p>A pre-hook that raises blocks the tool call and returns a failed <code>ToolResult</code>.</p>
+<hr />
+<h2 id="toolregistry_1">ToolRegistry<a class="headerlink" href="#toolregistry_1" title="Permanent link">&para;</a></h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="hybi.agent.registry.ToolRegistry" class="doc doc-heading">
+            <code>hybi.agent.registry.ToolRegistry</code>
+
+
+<a href="#hybi.agent.registry.ToolRegistry" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents first">
+
+
+
+        <p>Registry of all available tools.</p>
+<p>Tools are registered by name and looked up during invocation.
+The registry also supports filtering by category and exporting
+tool schemas for framework adapters.</p>
+<p>Supports pre- and post-invocation hooks for middleware patterns
+(logging, gating, meta-reasoning capture, etc.).</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="hybi.agent.registry.ToolRegistry.tool_names" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">tool_names</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#hybi.agent.registry.ToolRegistry.tool_names" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.registry.ToolRegistry.register" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">register</span><span class="p">(</span><span class="n">tool</span><span class="p">)</span></code>
+
+<a href="#hybi.agent.registry.ToolRegistry.register" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Register a tool definition.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.registry.ToolRegistry.register_many" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">register_many</span><span class="p">(</span><span class="n">tools</span><span class="p">)</span></code>
+
+<a href="#hybi.agent.registry.ToolRegistry.register_many" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Register multiple tool definitions.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.registry.ToolRegistry.get" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+
+<a href="#hybi.agent.registry.ToolRegistry.get" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Look up a tool by name.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.registry.ToolRegistry.list_tools" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">list_tools</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#hybi.agent.registry.ToolRegistry.list_tools" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>List all registered tools, optionally filtered by category.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.registry.ToolRegistry.invoke" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">invoke</span><span class="p">(</span><span class="n">call</span><span class="p">,</span> <span class="n">session</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#hybi.agent.registry.ToolRegistry.invoke" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Invoke a tool by dispatching to its handler.</p>
+<p>Runs pre-hooks before execution and post-hooks after.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>call</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="hybi.agent.tools.ToolCall
+
+
+  
+      dataclass
+  " href="../tools/#hybi.agent.tools.ToolCall">ToolCall</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Parsed tool call from the LLM.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>session</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="hybi.agent.session.AgentSession" href="../session/#hybi.agent.session.AgentSession">AgentSession</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The active agent session (passed to the handler).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="hybi.agent.tools.ToolResult
+
+
+  
+      dataclass
+  " href="../tools/#hybi.agent.tools.ToolResult">ToolResult</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>ToolResult from the handler, or an error result if the tool</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="hybi.agent.tools.ToolResult
+
+
+  
+      dataclass
+  " href="../tools/#hybi.agent.tools.ToolResult">ToolResult</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>is not found or the handler raises.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.registry.ToolRegistry.export_schemas" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">export_schemas</span><span class="p">()</span></code>
+
+<a href="#hybi.agent.registry.ToolRegistry.export_schemas" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Export all tool definitions as JSON-serializable dicts.</p>
+<p>This is the raw schema; framework adapters translate it further
+into provider-specific formats.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.registry.ToolRegistry.register_pre_hook" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">register_pre_hook</span><span class="p">(</span><span class="n">hook</span><span class="p">)</span></code>
+
+<a href="#hybi.agent.registry.ToolRegistry.register_pre_hook" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Register a pre-invocation hook.</p>
+<p>Hook signature: <code>async (call, session) -&gt; Optional[ToolCall]</code>
+Return <code>None</code> to block the call (invoke returns a blocked result).
+Return a <code>ToolCall</code> (original or modified) to proceed.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.registry.ToolRegistry.register_post_hook" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">register_post_hook</span><span class="p">(</span><span class="n">hook</span><span class="p">)</span></code>
+
+<a href="#hybi.agent.registry.ToolRegistry.register_post_hook" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Register a post-invocation hook.</p>
+<p>Hook signature: <code>async (call, result, session) -&gt; Optional[ToolResult]</code>
+Return <code>None</code> to pass through the original result unchanged.
+Return a <code>ToolResult</code> to replace it.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="hybi.agent.registry.ToolRegistry.remove_hook" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">remove_hook</span><span class="p">(</span><span class="n">hook</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#hybi.agent.registry.ToolRegistry.remove_hook" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Remove a previously registered pre- or post-hook.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>hook</code>
+            </td>
+            <td>
+                  <code><span title="typing.Callable">Callable</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The hook callable to remove.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>kind</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><code>'pre'</code>, <code>'post'</code>, or <code>None</code> (scans both).</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>True if the hook was found and removed, False otherwise.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
 
 
 
